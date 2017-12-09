@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Principios eléctricos y aplicaciones digitales</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <div class="iblock">
+               <img class="logo-its" src="img/logo.png" alt="logo its">
+          </div>
+        <h1>Principios eléctricos y aplicaciones digitales</h1>
+       	<div class="wrap">
+            <nav>
+                <ul class="menu center">
+                    <li onclick="cambiar(1)"><a href="#unidad1">Unidad 1: <br/> Fundamentos de circuitos eléctricos</a>
+                        <ul class="sub-menu">
+                            <li><a href="#1.1" >1.1 Conceptos de:<br/>Corriente alterna (CA)<br/>Corriente directa (CD)</a>
+                            </li>
+                            <li><a href="#1.2">1.2 Diferencia entre los elementos activos y pasivos</a></li>
+                            <li><a href="#1.2.2">1.2.2 Analisis de circuitos</a></li>
+                            <li><a href="#1.2.3">1.2.3 Uso de instrumentos de medición</a></li>
+                            <li><a href="#1.2.4">1.2.4 Especificaciones de conductores electricos</a></li>
+                            <li><a href="#1.2.5">1.2.5 Aplicaciones</a></li>
+                        </ul>
+                    </li>
+                    <li onclick="cambiar(2)"><a href="#unidad2">Unidad 2: <br/> Electronica analógica</a>
+                        <ul class="sub-menu">
+                            <li><a href="#2.1">2.1 Dispositivos activos</a></li>
+                            <li><a href="#2.1.1">2.1.1 Dispositivos semiconductores tipo P y tipo N</a></li>
+                            <li><a href="#2.1.2">2.1.2 Diodo semiconductor</a></li>
+                            <li><a href="#2.1.3">2.1.3 Transistores bipolares</a></li>
+                            <li><a href="#2.1.4">2.1.4 Tiristores SRC, DIAC, TRIAC</a></li>
+                            <li><a href="#2.2">2.2 Amplificadores operacionales (OPAM)</a></li>
+                            <li><a href="#2.3">2.3 Fuentes de voltaje</a></li>
+                        </ul>
+                    </li>    
+                    <li onclick="cambiar(3)"><a href="#unidad3">Unidad 3: <br/> Electronica digital</a>
+                        <ul class="sub-menu">
+                            <li><a href="#3.1">3.1 Compuertas lógicas y tablas de verdad</a></li>
+                            <li><a href="#3.1.1">3.1.1 Lógica TTL</a></li>
+                            <li><a href="#3.1.2">3.1.2 Algebra de Boole</a></li>
+                            <li><a href="#3.1.3">3.1.3 Miniterminos y Maxiterminos</a></li>
+                            <li><a href="#3.2">3.2 Técnica de simplificación</a></li>
+                            <li><a href="#3.3">3.3 Métodos de diseño</a></li>
+                            <li><a href="#3.4">3.4 Temporizadores</a></li>
+                            <li><a href="#3.5">3.5 Logica secuencial</a></li>
+                            <li><a href="#3.5.1">3.5.1 Compuertas</a></li>
+                            <li><a href="#3.5.2">3.5.2 Flip-flop </a></li>
+                            <li><a href="#3.5.3">3.5.3 Diseño de circuitos secuenciales</a></li>
+                        </ul>
+                    </li>
+                    <li onclick="cambiar(4)"><a href="#unidad4">Unidad 4: <br/> Convertidores</a>
+                        <ul class="sub-menu">
+                            <li><a href="#4.1">4.1 Convertidor analógico/digital<br/>
+                                - Tipos <br/>
+                                - Aplicaciones
+                            </a></li>
+                            <li><a href="#4.2">4.2 Convertidor digital/analógico<br/>
+                                - Tipos <br/>
+                                - Aplicaciones
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </nav>
+        </div>
+
+
+        <section class="unidad" id="unidad1">
+            <h2>Unidad 1: Fundamentos de circuitos eléctricos</h2>
+               <div class="tema">
+                    <h3 id="1.1">1.1 Conceptos de corriente alterna (CA) y corriente directa (CD).</h3>
+                    <p>
+                        La corriente eléctrica es el flujo continuo y controlado de electrones en un circuito eléctrico. Cuando se tiene una fuente de voltaje conectada a través de conductores a un dispositivo, las cargas eléctricas fluyen desde un polo hacia otro; a este flujo se le llama corriente eléctrica y es el indicador de la cantidad de flujo hacia algún punto. La intensidad de corriente se conoce como la variación de carga con respecto al tiempo y su intensidad se mide en coulombs por segundo; esta unidad se denomina ampere o amperio. El aparato que se utiliza para medir la corriente eléctrica es el amperímetro.    
+                    </p> 
+                    <h4>Corriente Directa</h4>
+                    <p>
+                        La corriente directa (CD), también conocida como corriente continua (CC), siempre fluye en la misma dirección. Los electrones fluyen en una sola dirección pues la polaridad del voltaje o de la fuente de la FEM es la misma; una de las terminales o polos de la batería es siempre positiva y la otra negativa. La corriente directa nunca cambia de dirección. Los electrones fluyen desde la terminal negativa (polo negativo) de la fuente de voltaje, recorren el circuito y retornan a la terminal positiva (polo positivo). Algunos ejemplos claros de fuentes de corriente continua son: la pila seca, el acumulador de un automóvil, un generador de cc o un rectificador de corriente. La corriente directa que nunca cambia en magnitud (o nivel de corriente) se denomina cc estable. Las baterías producen cc estable.
+                    </p>
+                    <img src="img/u1/ccPuslanteCD.png">
+                    <li>cc pulsante</li>
+                    <p>
+                        La cc pulsante (pulsating) cambia de magnitud, pero en el osciloscopio siempre aparece sobre el mismo lado del eje del cero o de las ordenadas, ya que su polaridad siempre es constante.
+                    </p>
+                    <img src="img/u1/ccPuslanteCA.png">
+                    <h4> Corriente Alterna </h4>
+                    <p>
+                        Una fuente de corriente alterna produce un voltaje que regularmente se va alternando, aumentando desde cero hasta un máximo positivo y decreciendo desde este máximo hasta cero, para volver a aumentar hasta un valor máximo negativo y decrecer hasta llegar nuevamente a cero; a esta variación completa se le llama ciclo. La corriente alterna (ca) es un tipo de corriente cuya polaridad se invierte periódicamente.<br>La corriente alterna cambia tanto en magnitud como en su dirección. En el osciloscopio, el voltaje y la corriente aparecen a ambos lados del eje del cero o de las ordenadas, según la polaridad del voltaje se alterne y la corriente cambie de dirección.
+                    </p> 
+                    <img src="img/u1/ondaCA.png">
+                    <li>Onda sinusoidal</li>
+                    <p>
+                        El voltaje y corriente alternas producidos por el movimiento rotatorio de un generador asumen la forma de una onda o curva sinusoidal: ésta es la forma más común de voltaje y corriente alterna.
+                    </p>
+                    <img src="img/u1/OndaSinuCA.png">
+                    <p>
+                        Las ondas sinusoidales son medidas y comparadas de acuerdo con ciertas características. La amplitud de la onda sinusoidal nos indica el máximo valor de corriente o de voltaje; éste puede ser positivo o negativo.
+                        <li>Un ciclo es una repetición completa de la forma de la onda.</li>
+                        <li>La frecuencia es el número de ciclos por segundo. Entre mayor sea el número de ciclos por segundo, mayor será la frecuencia. Entre mayor sea la frecuencia, menor será la cantidad de tiempo por ciclo.</li>
+                        <li>Hertz es el término empleado para los ciclos por segundo: 60 hertz = 60 ciclos/segundo.</li>
+                        <li>Voltaje pico a pico es el voltaje medido entre los puntos máximo positivo y máximo negativo de una onda sinusoidal.</li>   
+                    </p>
+                </div>
+                <div class="tema">
+                   <h3 id="1.2">1.2 Diferencia entre los elementos activos y pasivos.</h3>
+                    <h4>Componentes pasivos</h4>
+                    <p>
+                        Son aquellos componentes que actúan como meros receptores y consumidores de la señal eléctrica. No generan ni ganancia ni control de la señal eléctrica. Los componentes pasivos son resistores, condensadores y bobinas.<br>Componentes electrónicos pasivos:
+                    </p>
+                    <li>Capacitores (o condensadores)</li>
+                    <li>Resistencias (o resistores)</li>
+                    <li>Inductores (o bobinas)</li>
+                    <li>Potenciómetros</li>
+                    <li>Transformador</li>
+                    <li>Transductores</li>
+                    <li>Zumbador</li>
+                    <li>Interruptor controlador por puerta</li>
+                    <li>Fusible</li>
+                    
+                    <h4>Componentes activos</h4>
+                    <p>
+                        Se trata de componentes capaces de generar, modificar o amplificar la señal eléctrica. Algunos ejemplos de componentes activos son el diodo y el transistor. <br> Componentes electrónicos activos:
+                    </p>
+                    <li>Diodos</li>
+                    <li>Amplificadores Operacionales</li>
+                    <li>Compuerta Lógica</li>
+                    <li>Transistores</li>
+                    <li>Comparadores de Voltaje</li>
+                    <li>Baterías</li>
+                    <li>FPGA</li>
+                    <li>Triac</li>
+                    <li>Emisor de Campo</li>
+                    <div class="subtema">
+                        <h3 id="1.2.2">1.2.2 Analisis de circuitos.</h3>
+                        <p>
+                            La corriente eléctrica (movimiento de cargas eléctricas) se transmite de un lugar a otro a través de cables eléctricos. Los cables eléctricos tienen un conductor metálico (generalmente de cobre o aluminio), que es el que transporta la corriente eléctrica. La cantidad de corriente transmitida está relacionada con el área transversal del metal conductor: a mayor área, mayor corriente eléctrica transmitida. El aislamiento del cable tiene la función de evitar que la corriente eléctrica se salga del conductor metálico. El espesor de aislamiento está relacionado con la tensión eléctrica que soporta el cable: a mayor espesor de aislamiento, el cable soporta mayor tensión eléctrica. Las unidades que se emplean para medir la corriente eléctrica son carga eléctrica entre tiempo [coulombs por segundo (C/s), a lo que se le llama ampere].
+                        </p>
+                        <h4>Cable eléctrico</h4>
+                        <p>
+                            Para que la corriente eléctrica se transmita de un lugar a otro, se requiere que exista una diferencia de tensión o voltaje entre los dos lugares y que estén unidos mediante un cable. Las unidades que se emplean para medir la tensión eléctrica son los volts.
+                        </p>
+                        <h4>Partes de un circuito eléctrico</h4>
+                        <li>
+                            La fuente generadora de tensión o electricidad. Ésta puede ser un generador una batería, la salida de un transformador o la alimentación de la compañía suministradora de electricidad, la Comisión Federal de Electricidad.
+                        </li>
+                        <li>El medio de transmisión de electricidad, que son los cables.</li>
+                        <li>
+                            La carga, que es donde se utiliza la electricidad; puede ser un motor. un foco, una lavadora, una televisión, una computadora, etc.
+                        </li>
+                        <li>
+                            El medio de desconexión de la electricidad, que se conoce como interruptor.
+                        </li>
+                        <img src="img/u1/circuito.png" alt="circuito">
+                        <h4>Segunda Ley o Ley de Conservación de la Tensión</h4>
+                        <p>
+                            En cualquier circuito cerrado, la suma de las tensiones eléctricas de los elementos pasivos de un circuito, como son los conductores y las cargas, es igual a la tensión eléctrica del elemento activo o fuente.
+                        </p>
+                        <img src="img/u1/LeyConservacion.png" alt="Ley Conservacion">
+                        <p>Donde:</p>
+                        <li>Vf = Tensión de la fuente</li>
+                        <li>V1 = Tensión de cable 1</li>
+                        <li>Vc = Tensión de la carga o foco</li>
+                        <li>V2 = Tensión del cable 2</li>
+                        <p>
+                            En corriente directa, la tensión de un cable o una carga está dada por la Ley de Ohm, que se explicó con anterioridad y la cual se expresa en la siguiente fórmula: <b>V = R X I</b>
+                        </p>
+                        <p>Donde:</p>
+                        <li>V = Tensión del cable o carga en volts [V]</li>
+                        <li>R = Resistencia eléctrica del cable o carga en ohms [Ω]</li>
+                        <li>I = Corriente eléctrica que pasa por el cable o carga en amperes [A]</li>
+                        <h4>Calculo de voltajes y corrientes en los circuitos</h4>
+                        <p>
+                            <b>Circuitos en serie</b><br>Se le llama circuito en serie a un circuito como el de la figura, en el cual la corriente que pasa por todas las resistencias es la misma, debido a la Primera Ley de Kirchoff. A continuación, vamos a calcular la corriente y las tensiones de cada una de las resistencias de la figura: •Por la Segunda Ley de Kirchoff, tenemos que la suma de las tensiones de cada resistencia debe ser igual a la tensión de la fuente; y por la Ley de Ohm, la tensión de cada resistencia es igual a la corriente que pasa por ella, multiplicada por su resistencia:
+                        </p>
+                        <img src="img/u1/circuitoSerie.png" alt="circuitoSerie">
+                        <li>R1, R2 y R3 = Resistencias.</li>
+                        <li>I = Corriente.</li>
+                        <li>V = Tensión de la fuente.</li>
+                        <p>
+                            <b>Circuitos en paralelo</b><br>Se le llama circuito en paralelo a un circuito como el de la figura, en el cual la tensión de cada resistencia es la misma, debido a la Segunda Ley de Kirchoff. A continuación, vamos a determinar la tensión y la corriente en cada una de las resistencias. Por la Segunda Ley de Kirchoff, tenemos que la tensión de cada resistencia debe ser igual a la tensión de la fuente; y por la Ley de Ohm, la corriente que pasa por cada resistencia es igual a su tensión dividida entre su resistencia.
+                        </p>
+                        <img src="img/u1/circuitoParalelo.png" alt="circuitoParalelo">
+                        <li>R1, R2 y R3 = Resistencias.</li>
+                        <li>I1, I2, I3 = Corrientes de las resistencias 1, 2 y 3</li>
+                        <li>It = Corriente total.</li>
+                        <li>Vf = Tensión de la fuente.</li>
+                    </div>
+                    <div class="subtema">
+                        <h3 id="1.2.3">1.2.3 Uso de instrumentos de medición </h3>
+                        <h4>Unidades eléctricas</h4>
+                        <p>
+                            Unidades empleadas para medir cuantitativamente toda clase de fenómenos electrostáticos y electromagnéticos, así como las características electromagnéticas de los componentes de un circuito eléctrico. Las unidades eléctricas empleadas en técnica y ciencia se definen en el Sistema Internacional de unidades. Sin embargo, se siguen utilizando algunas unidades más antiguas.
+                        </p>
+                        <h4>Unidades SI</h4>
+                        <p>
+                            La unidad de intensidad de corriente en el Sistema Internacional de unidades es el amperio. La unidad de carga eléctrica es el culombio, que es la cantidad de electricidad que pasa en un segundo por cualquier punto de un circuito por el que fluye una corriente de 1 amperio. El voltio es la unidad SI de diferencia de potencial y se define como la diferencia de potencial que existe entre dos puntos cuando es necesario realizar un trabajo de 1 julio para mover una carga de 1 culombio de un punto a otro. La unidad de potencia eléctrica es el vatio, y representa la generación o consumo de 1 julio de energía eléctrica por segundo. Un kilovatio es igual a 1.000 vatios.
+                        </p>
+                        <h4>Calibración de los medidores</h4>
+                        <p>
+                            Para garantizar la uniformidad y la precisión de las medidas los medidores eléctricos se calibran conforme a los patrones de medida aceptados para una determinada unidad eléctrica, como el ohmio, el amperio, el voltio o el vatio.<br><b><i>Galvanómetros: </i></b>son los instrumentos principales en la detección y medición de la corriente. Se basan en las interacciones entre una corriente eléctrica y un imán. El mecanismo del galvanómetro está diseñado de forma que un imán permanente o un electroimán produce un campo magnético, lo que genera una fuerza cuando hay un flujo de corriente en una bobina cercana al imán. El elemento móvil puede ser el imán o la bobina. La fuerza inclina el elemento móvil en un grado proporcional a la intensidad de la corriente. Este elemento móvil puede contar con un puntero o algún otro dispositivo que permita leer en un dial el grado de inclinación. <br><b><i>Microamperímetros: </i></b>está calibrado en millonésimas de amperio y un miliamperímetro en milésimas de amperio. Los galvanómetros convencionales no pueden utilizarse para medir corrientes alternas, porque las oscilaciones de la corriente producirían una inclinación en las dos direcciones. <br><b><i>Electrodinamómetros: </i></b>una variante del galvanómetro, puede utilizarse para medir corrientes alternas mediante una inclinación electromagnética. Este medidor contiene una bobina fija situada en serie con una bobina móvil, que se utiliza en lugar del imán permanente del galvanómetro. Dado que la corriente de la bobina fija y la móvil se invierte en el mismo momento, la inclinación de la bobina móvil tiene lugar siempre en el mismo sentido, produciéndose una medición constante de la corriente. Los medidores de este tipo sirven también para medir corrientes continuas. <br><b><i>Medidores de aleta de hierro: </i></b>otro tipo de medidor electromagnético es el medidor de aleta de hierro o de hierro dulce. Este dispositivo utiliza dos aletas de hierro dulce, una fija y otra móvil, colocadas entre los polos de una bobina cilíndrica y larga por la que pasa la corriente que se quiere medir. La corriente induce una fuerza magnética en las dos aletas, provocando la misma inclinación, con independencia de la dirección de la corriente. La cantidad de corriente se determina midiendo el grado de inclinación de la aleta móvil. <br><b><i>Medidores de termopar: </i></b>Para medir corrientes alternas de alta frecuencia se utilizan medidores que dependen del efecto calorífico de la corriente. En los medidores de termopar se hace pasar la corriente por un hilo fino que calienta la unión de termopar. La electricidad generada por el termopar se mide con un galvanómetro convencional. En los medidores de hilo incandescente la corriente pasa por un hilo fino que se calienta y se estira. El hilo está unido mecánicamente a un puntero móvil que se desplaza por una escala calibrada con valores de corriente.
+                        </p>
+                        <h4>Otros tipos de mediciones</h4>
+                        <p>
+                            <b><i>Puente de Wheatston: </i></b>las mediciones más precisas de la resistencia se obtienen con un circuito llamado puente de Wheatstone, en honor del físico británico Charles Wheatstone. Este circuito consiste en tres resistencias conocidas y una resistencia desconocida, conectadas entre sí en forma de diamante. Se aplica una corriente continua a través de dos puntos opuestos del diamante y se conecta un galvanómetro a los otros dos puntos. <br><b><i>Contadores de servicio: </i></b>el medidor de vatios por hora, también llamado contador de servicio, es un dispositivo que mide la energía total consumida en un circuito eléctrico doméstico. Es parecido al vatímetro, pero se diferencia de éste en que la bobina móvil se reemplaza por un rotor. El rotor, controlado por un regulador magnético, gira a una velocidad proporcional a la cantidad de potencia consumida. El eje del rotor está conectado con engranajes a un conjunto de indicadores que registran el consumo total.
+                        </p>
+                        <h4>Resitencias</h4>
+                        <p>Las resistencias o resistores son dispositivos que se usan en los circuitos eléctricos para limitar el paso de la corriente, las resistencias de uso en electrónica son llamadas "resistencias de carbón" y usan un código de colores como se ve a continuación para identificar el valor en ohmios de la resistencia en cuestión.</p>
+                    </div>
+                    <div class="subtema">
+                        <h3 id="1.2.4">1.2.4 Especificaciones de conductores electricos </h3>
+                        <p>
+                            Son los elementos que proveen la trayectoria para el flujo de la corriente en las instalaciones eléctricas. Con los conductores eléctricos se hace la distribución de la energía eléctrica para el control y consumo de los equipos de la instalación. Las partes de un conductor, son las siguientes:
+                        </p>
+                        <h4>Alma conductora</h4>
+                        <p>Es la parte que lleva toda la corriente de consumo. Los materiales comúnmente utilizados son el cobre y el aluminio, pero con más frecuencia de cobre.</p>
+                        <h4>Cubierta protectora</h4>
+                        <p>No todos la traen, esta se encarga de proteger el material aislante y el arma conductora contra daños físicos y químicos. Se construye generalmente de nylon, esto varía según el ambiente al que se vaya a utilizar.</p>
+                        <h4>Aislante</h4>
+                        <p>Se encarga de separar o aislar el flujo de corriente del exterior, para evitar cortocircuitos y la electrocución. Este se fabrica de un material termoplástico o en hule.</p>
+                        <h4>Alambre</h4>
+                        <p>Conductor eléctrico cuya alma conductora esta fAlambre Conductor elÈctrico cuya alma conductora.ormada por un solo elemento o hilo conductor. Se emplea en lÌneas aÈreas, como conductor desnudo o aislado, en instalaciones elÈctricas a la intemperie, en ductos o directamente sobre aisladores.</p>
+                        <h4>Cable</h4>
+                        <p>Conductor eléctrico cuya alma conductora est· formada por una serie de hilos conductores o alambres de baja sección, lo que le otorga una gran flexibilidad.</p>
+                        <h4>Monoconductor</h4>
+                        <p>Conductor eléctrico con una sola alma conductora, con aislaciÛn y con o sin cubierta protectora</p>
+                        <h4>Multiconductor</h4>
+                        <p>Conductor de dos o mas almas conductoras aisladas entre sÌ, envueltas cada una por su respectiva capa de aislación y con una o m·s cubiertas protectoras comunes.</p>
+                        <h4>Dimensionamiento por voltaje de pérdida</h4>
+                        <p>Al circular una corriente eléctrica a travÈs de los conductores de una instalación; se produce en ellos una caÌda de tensión que responde a la siguiente expresión: <b>Vp= I x Rc (Ω)</b></p>
+                        <li>Vp : Voltaje de pérdida (V)</li>
+                        <li>Rc : Resistencia de los Conductores</li>
+                        <li>I : Corriente de Carga (A)</li>
+                        <h4>Semiconductores</h4>
+                        <p>Un semiconductor puede tener las características de un conductor o de un aislador, dependiendo de su temperatura y la FEM aplicada. El silicio puro, un material gris de apariencia metálica, es un semiconductor. A la temperatura normal no tiene electrones libres. Todos sus electrones están unidos a sus respectivos átomos. El silicio puro a la temperatura normal es un aislador. Si su temperatura se eleva hasta cierto valor crítico, se vuelve conductor. Cuando el cristal de silicio alcanza una temperatura crítica, los electrones periféricos son desprendidos de sus átomos por la energía calorífica y flotan en los espacios de cristal. Tan pronto como la temperatura alcanza este nivel, el silicio será conductor. En el instante en que la temperatura está por debajo del nivel crítico, los electrones libres volverán a sus átomos. El silicio tendrá nuevamente su cualidad aislante.</p>
+                        <h4>Resistencia</h4>
+                        <p>El flujo de electrones necesita un material que permita por su medio un fácil desplazamiento de los electrones. La oposición que presenta un material al flujo de electrones es conocida como resistencia. En algunos aisladores, como la cerámica y los plásticos, los electrones están fuertemente amarrados a sus átomos. Mientras el voltaje no sea muy alto –generalmente miles de voltios–, no se mueve ningún electrón. En todo conductor, el más mínimo voltaje mueve electrones, sin embargo, en aquellos materiales con una gran resistencia,se moverán muy pocos. En materiales con muy poca resistencia se moverán muchos electrones con muy poco voltaje. La corriente o flujo de electrones libres en un circuito eléctrico encuentra oposición a su movimiento en todas las partes del circuito. Esta oposición es llamada resistencia,siempre que el flujo de electrones encuentra resistencia, su energía cinética (de movimiento) se convierte en energía calorífica (calor). Corriente o flujo de electrones a través de una resistencia = calor. La línea quebrada indica la mayor oposición al flujo de electrones.</p>
+                        <h4>Medida de la resistencia</h4>
+                        <p>La resistencia siempre causa una pérdida de energía en los electrones (que es convertida en calor). El ohmio = unidad de resistencia que causa una caída de voltaje de 1 voltio a una corriente constante de 1 amperio. El aparato para medir la resistencia es el ohmetro y se conecta en los extremos de la resistencia por medir.</p>
+                        <h4>Relacion entre el voltaje, corriente y resistencia</h4>
+                        <p>Al aplicar un voltaje a un circuito eléctrico cerrado, se produce una corriente de electrones a través de todas las partes del circuito. El voltaje aplicado da una fuerza (energía cinética) a los electrones libres, que es convertida en calor (energía calorífica) por la resistencia del circuito.Las tres cantidades eléctricas –corriente, voltaje y resistencia– pueden determinarse usando la Ley de Ohm.</p>
+                        <h4>Ley de Ohm</h4>
+                        <p>La Ley de Ohm voltaje aplicado es igual a la corriente del circuto por la resistencia del msmo.</p>
+                        <b>V = I x R</b>
+                        <li>I = intensidad del flujo de electrones, o corriente de electrones, medida en amperes [A].</li>
+                        <li>V = voltaje (también conocido como E = tensión FEM = fuerza electromotriz) en volts [V].</li>
+                        <li>R = Es la resistencia del circuito, medida en Ohms [Ω].</li>
+                        <b>P = V X I</b>
+                        <p>La potencia eléctrica, la cantidad de energía eléctrica se convertida (generada o disipada) simplemente es la corriente multiplicada por el voltaje. La unidad de medida de la potencia eléctrica es el watt (W).Un voltaje de 1 volt, al empujar una corriente de 1 ampere, produce 1 watt de potencia.</p>
+                        <li>P = Potencia en watts [W]</li>
+                        <li>I = Corriente eléctrica en amperes [A]</li>
+                        <li>V = Voltaje o tensión en volts [V]</li>
+                    </div>
+                    <div class="subtema">
+                        <h3 id="1.2.5">1.2.5 Aplicaciones</h3>
+                        <h4>Fuentes de Alimentación</h4>
+                        <p>La mayoría de los equipos electrónicos requieren tensiones de CC para su funcionamiento. Estas tensiones pueden ser suministradas por baterías o por fuentes de alimentación internas que convierten la corriente alterna, que puede obtenerse de la red eléctrica que llega a cada vivienda, en tensiones reguladas de CC. El primer elemento de una fuente de alimentación de CC interna es el transformador, que eleva o disminuye la tensión de entrada a un nivel adecuado para el funcionamiento del equipo. La función secundaria del transformador es servir como aislamiento de masa (conexión a tierra) eléctrica del dispositivo a fin de reducir posibles peligros de electrocución. A continuación del transformador se sitúa un rectificador, que suele ser un diodo. En el pasado se utilizaban diodos de vacío y una amplia variedad de diferentes materiales (cristales de germanio o sulfato de cadmio) en los rectificadores de baja potencia empleados en los equipos electrónicos. En la actualidad se emplean casi exclusivamente rectificadores de silicio debido a su bajo coste y alta fiabilidad. <br> Las fluctuaciones y ondulaciones superpuestas a la tensión de CC rectificada (percibidas como un zumbido en los amplificadores de sonido defectuosos) pueden filtrarse mediante un condensador. Cuanto más grande sea el condensador, menor será el nivel de fluctuación de la tensión. Es posible alcanzar un control más exacto sobre los niveles y fluctuaciones de tensión mediante un regulador de tensión, que también consigue que las tensiones internas sean independientes de las fluctuaciones que puedan encontrarse en un artefacto eléctrico. Un sencillo regulador de tensión que se utiliza a menudo es el diodo de Zener, formado por un diodo de unión pn de estado sólido que actúa como aislante hasta una tensión predeterminada. Por encima de dicha tensión, se convierte en un conductor que deriva los excesos de tensión. Por lo general, los reguladores de tensión más sofisticados se construyen como circuitos integrados.</p>
+                        <h4>Circuitos amplificadores</h4>
+                        <p>Los amplificadores electrónicos se utilizan sobre todo para aumentar la tensión, la corriente o la potencia de una señal. Los amplificadores lineales incrementan la señal sin distorsionarla (o distorsionándola mínimamente), de manera que la salida es proporcional a la entrada. Los amplificadores no lineales permiten generar un cambio considerable en la forma de onda de la señal. Los amplificadores lineales se utilizan para señales de sonido y vídeo, mientras que los no lineales se emplean en osciladores, dispositivos electrónicos de alimentación, moduladores, mezcladores, circuitos lógicos y demás aplicaciones en las que se requiere una reducción de la amplitud. Aunque los tubos de vacío tuvieron gran importancia en los amplificadores, hoy día suelen utilizarse circuitos de transistores discretos o circuitos integrados.</p>
+                        <h4>Amplificadores de sonido</h4>
+                        <p>Los amplificadores de sonido, de uso común en radios, televisiones y grabadoras de cintas, suelen funcionar a frecuencias entre 2 y 20 kiloherz (1 kHz = 1.000 ciclos por segundo). Amplifican la señal eléctrica que, a continuación, se convierte en sonido con un altavoz. Los amplificadores operativos, incorporados en circuitos integrados y formados por amplificadores lineales multifásicos acoplados a la corriente continua, son muy populares como amplificadores de sonido.</p>
+                        <h4>Amplificadores de video</h4>
+                        <p>Los amplificadores de vídeo se utilizan principalmente para señales con un rango de frecuencias de hasta 6 megaherz (1 MHz = 1 millón de ciclos por segundo). La señal generada por el amplificador se convierte en la información visual por ejemplo la que aparece en la pantalla de televisión, y la amplitud de señal regula el brillo de los puntos que forman la imagen. Para realizar esta función, un amplificador de vídeo debe funcionar en una banda ancha y amplificar de igual manera todas las señales, con baja distorsión.</p>
+                        <h4>Amplificadores de radiofrecuencia</h4>
+                        <p>Estos amplificadores aumentan el nivel de señal de los sistemas de comunicaciones. de radio o televisión. Por lo general, sus frecuencias van desde 100 kHz hasta 1 gigaherz (1 GHz = 1.000 millones de ciclos por segundo), y pueden llegar incluso al rango de frecuencias de microondas.</p>
+                        <h4>Osciladores</h4>
+                        <p>Los osciladores constan de un amplificador y de algún tipo de realimentación: la señal de salida se reconduce a la entrada del amplificador. Los elementos determinantes de la frecuencia pueden ser un circuito de inductancia-capacitancia sintonizado o un cristal vibrador. Los osciladores controlados por cristal ofrecen mayor precisión y estabilidad. Los osciladores se emplean para producir señales de sonido y de radio en una amplia variedad de usos. Por ejemplo, los osciladores sencillos de radiofrecuencia se emplean en los modernos teléfonos de teclas para transmitir datos a la estación telefónica central al marcar un número. Los tonos de sonido generados por los osciladores también pueden encontrarse en relojes despertadores, radios, instrumentos electrónicos, computadoras y sistemas de alarma. Los osciladores de alta frecuencia se emplean en equipos de comunicaciones para controlar las funciones de sintonización y detección de señales. Las emisoras de radio y de televisión utilizan osciladores de alta frecuencia y de gran precisión para generar las frecuencias de transmisión.</p>
+                        <h4>Circuitos Lógicos</h4>
+                        <p>Los circuitos de conmutación y temporización, o circuitos lógicos, forman la base de cualquier dispositivo en el que se tengan que seleccionar o combinar señales de manera controlada. Entre los campos de aplicación de estos tipos de circuitos pueden mencionarse la conmutación telefónica, las transmisiones por satélite y el funcionamiento de las computadoras digitales. <br> La lógica digital es un proceso racional para adoptar sencillas decisiones de 'verdadero' o 'falso' basadas en las reglas del álgebra de Boole. El estado verdadero se representado por un 1, y falso por un 0, y en los circuitos lógicos estos numerales aparecen como señales de dos tensiones diferentes. Los circuitos lógicos se utilizan para adoptar decisiones específicas de 'verdadero-falso' sobre la base de la presencia de múltiples señales 'verdadero-falso' en las entradas. Las señales se pueden generar por conmutadores mecánicos o por transductores de estado sólido. La señal de entrada, una vez aceptada y acondicionada (para eliminar las señales eléctricas indeseadas, o ruidos), es procesada por los circuitos lógicos digitales. Las diversas familias de dispositivos lógicos digitales, por lo general circuitos integrados, ejecutan una variedad de funciones lógicas a través de las llamadas puertas lógicas, como las puertas OR, AND y NOT y combinaciones de las mismas (como 'NOR', que incluye a OR y a NOT). Otra familia lógica muy utilizada es la lógica transistor-transistor. También se emplea la lógica de semiconductor complementario de óxido metálico, que ejecuta funciones similares a niveles de potencia muy bajos pero a velocidades de funcionamiento ligeramente inferiores. Existen también muchas otras variedades de circuitos lógicos, incluyendo la hoy obsoleta lógica reóstato-transistor y la lógica de acoplamiento por emisor, utilizada para sistemas de muy altas velocidades.</p>
+                    </div>
+                </div>
+        </section>
+        
+        <section class="unidad hidden" id="unidad2">
+                <h2>Unidad 2: Electrónica analógica</h2>
+                <div class="tema">
+                    <h3 id="2.1">2.1 Dispositivos activos</h3>
+                    <p>Es un componente electrónico capaz de excitar los circuitos o de realizar ganancias o control del mismo. Son, en general, los generadores eléctricos y ciertos componentes semiconductores. Los componentes activos semiconductores son derivados del diodo de Fleming y del triodo de Lee de Forest. Primero se inventaron las válvulas, lo cual permitió desarrollar dispositivos electrónicos como la radio y el televisor. Luego se desarrollaron los semiconductores, los cuales luego dieron paso a los circuitos integrados, entre ellos los circuitos programables como los microprocesadores. En la actualidad existe un número elevado de componentes activos, siendo usual, que un sistema electrónico se diseñe a partir de uno o varios componentes activos cuyas características lo condicionará. Esto no sucede con los componentes pasivos.</p>
+                    <h4>Amplificador operacional</h4>
+                    <p>Un amplificador operacional (A.O.) es un circuito electrónico (normalmente se presenta como circuito integrado) que tiene dos entradas y una salida. La salida es la diferencia de las dos entradas multiplicada por un factor (G) (ganancia): Vout = G·(V+ - V-)</p>
+                    <h4>Diodo</h4>
+                    <p>Un diodo es un dispositivo que permite el paso de la corriente eléctrica en una única dirección. De forma simplificada, la curva característica de un diodo consta de dos regiones, por debajo de cierta diferencia de potencial, se comporta como un circuito abierto (no conduce), y por encima de ella como un circuito cerrado con muy pequeña resistencia eléctrica. Debido a este comportamiento, se les suele denominar rectificadores, ya que son dispositivos capaces de convertir una corriente alterna en corriente continua.</p>
+                    <h4>Diodo Zener</h4>
+                    <p>Un diodo Zener, es un diodo de silicio que se ha construido para que funcione en las zonas de rupturas. Llamados a veces diodos de avalancha o de ruptura, el diodo zener es la parte esencial de los reguladores de tensión casi constantes con independencia de que se presenten grandes variaciones de la tensión de red, de la resistencia de carga y temperatura.</p>
+                    <img src="img/u2/diodoZener.png" alt="Diodo Zener">
+                    <h4>Pila</h4>
+                    <p>Se llama ordinariamente pila eléctrica a un dispositivo que genera energía eléctrica por un proceso químico transitorio, tras de lo cual cesa su actividad y han de renovarse sus elementos constituyentes, puesto que sus características resultan alteradas durante el mismo. Se trata de un generador primario. Esta energía resulta accesible mediante dos terminales que tiene la pila, llamados polos, electrodos o bornes. Uno de ellos es el polo positivo o ánodo y el otro es el polo negativo o cátodo.</p>
+                    <h4>Transistor</h4>
+                    <p>El transistor es un dispositivo electrónico semiconductor que cumple funciones de amplificador, oscilador, conmutador o rectificador. El transistor consta de un sustrato (usualmente silicio) y tres partes dopadas artificialmente que forman dos uniones bipolares, el emisor que emite portadores, el colector que los recibe o recolecta y la tercera, que está intercalada entre las dos primeras, modula el paso de dichos portadores</p>
+                    <img src="img/u2/transistor.png" alt="transistor">
+                    <h4>TRIAC</h4>
+                    <p>Un TRIAC o Triodo para Corriente Alterna es un dispositivo semiconductor, de la familia de los transistores. La diferencia con un tiristor convencional es que éste es unidireccional y el TRIAC es bidireccional. De forma coloquial podría decirse que el TRIAC es un interruptor capaz de conmutar la corriente alterna. Su estructura interna se asemeja en cierto modo a la disposición que formarían dos SCR en antiparalelo. Posee tres electrodos: A1, A2 (en este caso pierden la denominación de ánodo y cátodo) y puerta. El disparo del TRIAC se realiza aplicando una corriente al electrodo puerta.</p>
+                    <img src="img/u2/triac.png" alt="TRIAC">
+                    <div class="subtema">
+                        <h3 id="2.1.1">2.1.1 Dispositivos semiconductores tipo P y tipo N</h3>
+                        <p>Los semiconductores son elementos que tienen una conductividad eléctrica inferior a la de un conductor metálico pero superior a la de un buen aislante. El semiconductor más utilizado es el silicio, que es el elemento más abundante en la naturaleza, después del oxígeno. Otros semiconductores son el germanio y el selenio.</p>
+                        <h4>Tipos de semiconductores</h4>
+                        <p><b><i>Semiconductores intrínsecos: </i></b>poseen una poseen una conductividad el conductividad eléctrica f ctrica fácilmente controlable y, al combinarlos cilmente controlable y, al combinarloscorrectamente, pueden actuar como interruptores, amplificadores o dispositivos de almacenamiento. Ejemplo: Si y Ge puros. <br><b><i>Semiconductores extrínsecos: </i></b>estos se forman al estos se forman al agregar, intencionadamente, a un semiconductor intr a un semiconductor intrínseco sustancias dopantes.</p>
+                        <h4>Union P-N</h4>
+                        <p>Antes de definir a una unión p-n, es conveniente mencionar que un semiconductor intrínseco es un material formado por un solo tipo de átomos o de elementos químicos, con una cantidad insignificante de impurezas. Mientras que un semiconductor extrínseco es un material al cual se le han agregado átomos de otro elemento químico con una cantidad diferente de electrones de valencia. Así, un semiconductor tipo n tiene átomos de impureza con una cantidad mayor de electrones de valencia y estos átomos aportan electrones a la banda de conducción. En un semiconductor tipo p los átomos de impureza tienen una cantidad menor de electrones de valencia y aportan huecos a la banda de valencia. <br>Ahora bien, a la unión entre dos regiones de un material semiconductor contaminadas con diferentes impurezas, es decir, una región tipo p y otra región tipo n, se le denomina unión p-n. A temperatura de 0º K, los electrones donadores de la región n y los huecos de la región p se encuentran unidos a sus átomos. <br>Al incrementarse la temperatura se liberan algunos electrones y huecos de sus átomos de impureza y se crean portadores libres que forman una corriente de difusión, los electrones de la región n se desplazan hacia la región p y viceversa. Este flujo de portadores crea iones positivos en la región n y negativos en la región p, formándose un campo eléctrico en la unión. Este campo eléctrico se opone a la difusión de más portadores y se genera en la unión una delgada región de agotamiento de portadores libres, como se muestra en la figura.</p>
+                        <img src="img/u2/PN.png" alt="p-n">
+                        <p>El campo eléctrico formado en la unión establece un potencial interno Vint entre las dos regiones que provoca el desalineamiento de sus bandas de energía. Mientras mayor sea la concentración de impurezas y la temperatura, mayor será el potencial interno y el desalineamiento de las bandas. Sin embargo, ya que el nivel de Fermi es una variable termodinámica, en estas condiciones de equilibrio térmico tal nivel de Fermi se mantiene constante a través de la unión. <br>Al polarizar directamente la unión p-n se reduce el potencial interno Vint y debido a que se pierde el equilibrio ya no se habla de un nivel de Fermi, sino de un cuasi nivel de Fermi, separándose cada uno de los niveles en proporción al potencial externo aplicado [Peyghambarian, 1993]. Si el potencial externo aplicado es tal que el potencial interno no puede evitar que los portadores mayoritarios crucen la unión, estos portadores se inyectan a la unión y se establece un flujo de corriente. <br>Por otro lado, al polarizar inversamente la unión pn, el potencial interno se incrementa y evita el flujo de corriente.</p>
+                    </div>
+                    <div class="subtema">
+                        <h3 id="2.1.2">2.1.2 Diodo semiconductor</h3>
+                        <p>El Diodo es un componente electrónico que solo permite el paso de la corriente en un sentido (por eso es un semiconductor, por que es conductor solo en determinadas condiciones). <br>Si el ánodo (triángulo en el símbolo y patilla de la parte negra en el diodo real) se conecta al polo positivo y el cátodo (Raya en el símbolo y patilla de la franja gris en el diodo real) al negativo, entonces por el diodo podrá circular corriente, sería similar a un interruptor cerrado. Así conectado, se dice que está polarizado directamente. Si lo conectamos al revés la corriente no pasará a través del diodo, será como un interruptor abierto. Fíjate que en el diodo real, para identificar el cátodo, es la parte de la banda de color gris del diodo. </p>
+                        <img src="img/u2/polarizacionDiodo.jpg" alt="polarizacion del diodo" class="img-grande">
+                        <p>El diodo polariado directamente permite el flujo a través de él de los electrones, o lo que es lo mismo permite el paso de la corriente eléctrica. En polarización inversa no permite el paso de lo electrones por él. Arriba puedes ver la gráfica típica de funcionamiento de un diodo. Para tensiones con polarización directa del diodo, según aumentamos la tensión en los bornes del diodo (patillas o extremos) va aumentando la corriente que circula por él. Lógicamente el diodo tendrá una tensión máxima de trabajo que no se podrá sobrepasar porque se quemaría. Para tensiones con polarización negativa no conduce y por lo tanto, por mucho que aumentemos la tensión no se producirá corriente alguna a través del diodo. <br>Los diodos semiconductores tienen la valiosa propiedad de que los electrones solamente fluyen en una dirección a través de ellos y, como resultado, actúan como un rectificadores. Son la estructura fundamental de los semiconductores y muchos otros componentes electronicos se fabrican teniendo como base a los diodos. Los diodos tienen una estructura electrónica llamada Union PN, es decir son la unión de un material semiconductor llamado N con otro llamado P. </p>
+                        <img src="img/u2/diodo-union-pn.jpg" alt="diodo-union-pn">
+                        <p>Solo hay unos diodos especiales que conducen en tensiones contrarias, es decir polarizados inversamente, son los llamados diodos zener. <br>Otro tipo de diodos son los Diodos Led, que emiten luz cuando están polarizados directamente, pero la mayoría de los diodos se utilizan como rectificadores de corriente, un puente de diodos (varios diodos conectados). <br>Este rectificador de diodos es muy utilizado en las Fuentes de Alimentación. Una onda senoidal alterna a la entrada se convierte en una onda continua rectificada por los diodos.</p>
+                    </div>
+                    <div class="subtema">
+                        <h3 id="2.1.3">2.1.3 Transistores bipolares</h3>
+                        <p>El transistor de unión bipolar (del inglés bipolar junction transistor, o sus siglas BJT) es un dispositivo electrónico de estado sólido consistente en dos uniones PN muy cercanas entre sí, que permite aumentar la corriente y disminuir el voltaje, además de controlar el paso de la corriente a través de sus terminales. La denominación de bipolar se debe a que la conducción tiene lugar gracias al desplazamiento de portadores de dos polaridades (huecos positivos y electrones negativos), y son de gran utilidad en gran número de aplicaciones; pero tienen ciertos inconvenientes, entre ellos su impedancia de entrada bastante baja. <br>Los transistores bipolares son los transistores más conocidos y se usan generalmente en electrónica analógica aunque también en algunas aplicaciones de electrónica digital, como la tecnología TTL o BICMOS. <br>Un transistor de unión bipolar está formado por dos Uniones PN en un solo cristal semiconductor, separados por una región muy estrecha. De esta manera quedan formadas tres regiones: </p>
+                        <li>Emisor, que se diferencia de las otras dos por estar fuertemente dopada, comportándose como un metal. Su nombre se debe a que esta terminal funciona como emisor de portadores de carga.</li>
+                        <li>Base, la intermedia, muy estrecha, que separa el emisor del colector.</li>
+                        <li>Colector, de extensión mucho mayor.</li>
+                        <h4>Construccion</h4>
+                        <li>Dispositivo semiconductor de tres capas: dos de material tipo n y una tipo p, llamado transistor npn; o dos de material tipo p y una de tipo n, llamado transistor pnp.</li>
+                        <li>Las capas exteriores se denominan colector y emisor, la capa intermedia se denomina base.</li>
+                        <li>La capa del emisor está muy dopada, la base ligeramente dopada y el colector está un poco dopado.</li>
+                        <h4>Operación del BJT</h4>
+                        <li>Se analizará el funcionamiento de un transistor pnp.</li>
+                        <li>La unión p-n de un transistor se polariza en inversa, mientras que la otra se polariza en directa.</li>
+                        <li>Como el material de la base es muy delgado y su conductividad baja, unos pocos portadores se irán en esa dirección. IB normalmente es del orden de microamperes.</li>
+                        <li>La mayoría de los portadores mayoritarios se difundirá a través de la unión polarizada en inversa hacia el material tipo p.</li>
+                        <li>En polarización inversa, los portadores mayoritarios inyectados aparecerán como portadores minoritarios en el material tipo n.</li>
+                        <li>Todos los portadores minoritarios de la región de empobrecimiento atravesarán la unión polarizada en inversa.</li>
+                        <h4>Base Común</h4>
+                        <li>La base es común tanto para la entrada como para la salida de la configuración.</li>
+                        <li>La flecha en el símbolo gráfico define la dirección de la corriente del emisor (flujo convencional) a través del dispositivo.</li>
+                        <h4>Región del corte</h4>
+                        <li>Las uniones base-emisor y colector-base se polarizan en inversa.</li>
+                        <li>La corriente del colector, así como la del emisor, es 0A.</li>
+                        <h4>Región de saturación</h4>
+                        <li>Es la región de las características a la izquierda de cuando VCB = 0.</li>
+                        <li>Al incrementarse VCB hacia 0V hay un incremento exponencial en la corriente del colector.</li>
+                        <li>Las uniones base-emisor y colector-base se polarizan en directa.</li>
+                        <h4>Alfa (α)</h4>
+                        <li>En modo de cd de operación los niveles de IC e IE originados por los portadores mayoritarios están relacionados por una cantidad llamada</li>
+                        <h4>Emisor Común</h4>
+                        <p>La configuración de emisor común es la más usada. En él, el transistor actúa como un amplificador de la corriente y de la tensión. Aparte de los efectos de amplificación, también invierte la tensión de señal, es decir, si la tensión es tendente a positiva en la base pasa a ser tendente a negativa en el colector; pero, como estos efectos se producen con la corriente alterna. <br>El valor de la corriente de base va a depender del valor de la resistencia RB, la corriente que circula por el colector, IC, depende de la corriente de base, IB, como hemos visto con la formula IC = b . IB; IC es mucho más grande que IB y ese aumento viene dado por b , que es un parámetro característico del transistor. <br>Al pasar la corriente por RC se va a producir una caída de potencial; luego, la tensión que obtengamos a la salida, también va a depender del valor de esta resistencia. Podemos colocar una resistencia en el emisor, que llamaremos RE, que va a perjudicar mucho la amplificación de tensión, pero va a hacer que el transistor sea mucho más estable y no le afecten los cambios de la temperatura.</p>
+                        <h4>Colector Común</h4>
+                        <p>Se utiliza principalmente para acoplamiento de impedancias, ya que tiene una alta impedancia de entrada y una baja de salida, lo contrario de las configuraciones anteriores.</p>
+                        <img src="img/u2/ColectorComun.png" alt="Colector comun" class="img-grande">
+                        <li>La figura muestra una configuración de circuito de colector común.</li>
+                        <li>Se pueden diseñar utilizando las características de emisor común.</li>
+                        <li>Para fines prácticos, las características de salida son las mismas que para la configuración de emisor común.</li>
+                        <li>Las características de salida se grafican como IE en función de VCE para un rango de valores de IB (la corriente de entrada por tanto será la misma).</li>
+                        <li>El eje horizontal se obtiene cambiando el signo del voltaje del colector al emisor.</li>
+                        <li>El cambio de la escala vertical al reemplazar IC por IE será casi imperceptible ya que α ≈ 1.</li>
+                        <p>Del circuito de arriba es fácil obtener la relación que existe entre la corriente de colector Ic y la tensión colector-emisor VCE del transistor, aplicando la ley de Kirchoff resulta: </p>
+                        <i>Vcc = VCE + IC . RC</i>
+                        <p>Esta expresión se conoce como ecuación de la recta de carga. En ella Vcc y RC son constantes, y VCE e IC son las variables. La intersección entre esta recta de carga con la curva característica de salida del transistor determina el punto de reposo Q. Para trazar la recta en el plano IC = f (VCE) es suficiente con establecer los puntos de corte con los ejes de coordenadas. Cuando la corriente de colector es cero IC = 0, la tensión colector-emisor es igual al potencial del generador VCE = Vcc: </p>
+                        <i>IC = 0; VCE = Vcc</i>
+                        <p>Por otro lado, cuando la tensión colector-emisor es igual a cero VCE = 0, la corriente de colector vale el potencial del generador entre la resistencia de colector IC = Vcc/RC: </p>
+                        <i>VCE = 0; IC = Vcc/RC</i>
+                        <p>En la figura se muestra el circuito de polarización y la recta de carga estática con el punto de reposo Q que representa la intersección de esta recta con la curva IB correspondiente. El valor de la corriente de base IB se puede calcular aplicando la ley de Kirchoff al circuito de entrada o de base, así tenemos: </p>
+                        <i>Vcc = VBE + IB . RB</i>
+                        <p>Sabemos que el transistor entre base-emisor se comporta como un diodo, así que la tensión base-emisor para el silicio suele ser de 0,7 V, es decir:</p>
+                        <i>VBE = 0,7 V</i>
+                        <p>Entonces para un dado valor constante de la fuente de alimentación Vcc tenemos que la corriente de base solo depende de RB y vale: </p>
+                        <i>IB = (Vcc – 0,7V)/ RB</i>
+                        <p>Sabemos también que existe una relación entre las tres corrientes del transistor: </p>
+                        <i>IC = β.IB</i>
+                        <p>De la 2ª ley de Kirchoff: </p>
+                        <i>IE = IC + IB = (β+1).IB</i>
+                        <p>La ganancia de corriente del transistor para continua se conoce como β o hFE, y no tiene unidades ya que relaciona IC/IB.</p>
+                    </div>
+                    <div class="subtema">
+                        <h3 id="2.1.4">2.1.4 Tiristores SRC, DIAC, TRIAC</h3>
+                        <p>Un tiristor es un dispositivo conmutador biestable que tiene la propiedad de pasar rápidamente al esta "ON"(encendido) para una plena corriente de trabajo cuando recibe un pulso momentáneo de corriente en su terminal de control, y sólo puede ser puesto en "OFF"(apagado) con la interrupción de la corriente principal de trabajo, interrumpiendo el circuito o haciendo circular una corriente de sentido contrario. Los tiristores son usualmente dispositivos de mediana y de alta potencia. Son el equivalente sólido de los interruptores mecánicos, por lo cual dejan pasar plenamente o bloquear por completo en paso de la corriente de trabajo, sin niveles intermedios; o todo, o nada. <br>Al grupo de los tiristores pertenecen dispositivos tales como el DIAC, equivalente a dos diodos zener puestos en serie pero en sentidos inversos, o sea que sólo conduce corrientes cuando éstas alcanzan cierto voltaje, así sean alternas; el SCR, un rectificador de conducción controlada; el TRIAC, equivalente a dos SCR en contraparalelo.</p>
+                        <h4>SCR (Rectificador Controlado de Silicio)</h4>
+                        <p>Este es un pequeño dispositivo de tres terminales, que hacen el mismo trabajo semicondudtor de un diodo normal(deja pasar corriente en un solo sentido), pero con la diferencia de que en éste se puede controlar el momento en el cual pueden comenzar a pasar los electrones. <br>Al primer terminal se le denomina Cátodo, y es utilizado como entrada de corriente. El segundo sirve de salida y se le llama Anodo y el tercero es el Gate, o terminal de control para el paso de corriente cátodo - ánodo. El gate, llamado también terminal de arranque o encendido del tiristor, sólo sirve para iniciar el paso de corriente entre los otros dos terminales, lo que logra con una corriente muy baja(unos 20 miliamperios).</p>
+                        <h4>DIAC (Diodo Interruptor de Corriente Alterna)</h4>
+                        <p>Este es un dispositivo controlado por voltaje, el cual se comporta como dos diodos zener puestos en contraparalelo, como ya lo digimos: cuando el voltaje de cualquier polaridad entre sus dos terminales excede el valor especificado, entra en avalancha y disminuye su resistencia interna a un valor muy bajo. Esto significa que, si es colocado en paralelo con la salida de una fuente de corriente alterna podrá recortar todos los picos positivos y negativos que pasen del voltaje del umbral del diac. <br>Si es puesto en serie, solamente dejará pasar corriente cuando lleve más tensión que la del gatillado para triacs en circuitos de corriente alterna. El dispositivo tiene un rango simétrico de conmutación(en ambos sentidos) de 20 a 40 voltios, tensión que usualmente excede el punto de umbral del gate de los triacs, de tal forma que estos trabajan siempre en un nivel seguro.</p>
+                        <h4>TRIAC</h4>
+                        <p>El diseño de los primeros TRIACs fue la respuesta a la necesidad industrial de dispositivos tiristores que pudieran controlar en fase todo el ciclo de una onda de corriente alterna, incorporando las funciones de 2 SCRs dentro de una sola pastilla semiconductora, y ambos controlados por un solo gate. Las características de compuerta(gate) del TRIAC son muy diferentes de aquellas para dos SCR en contraparalelo, para los SCR, se debe aplicar una señal positiva de control entre el Gate 1 y el terminal principal 1 cuando el terminal Principal 1 es negativo, y entre el Gate 2 y el terminal Principal 2 sea negativo. Este método de operación requiere de dos circuitos separados de compuerta. <br>En el TRIAC, el Gate 1 y el Gate 2 están conectados juntos y se pueden operar con solamente un circuito de control conectado entre las compuertas y el terminal Principal 1. El modo más fácil de gatillado para control de corriente alterna, se obtiene polarizando positivamente el terminal de compuertas cuando el Terminal Principal 1 sea positivo. En otras palabras, par poner en conducción en ambos sentidos al TRIAC basta con darle al gate un poco de señal de la misma corriente(polaridad) que haya en ese momento en el Terminal Principal 2.</p>
+                        <h4>Verificación y chequeo de tiristores</h4>
+                        <p>Si las características de voltaje y corriente de trabajo del tiristor lo permiten, puedes armar un crcuito para la comprobación del estado y la identificación del dispositivo(el ciruito de comprobación lo puedes ver en el indice). Cuando la bombilla enciende a plena luz es porque está circulando la onda completa de la corriente alterna, esto significa que se trata de un TRIAC. Cuando se trata de un SCR la bombilla sólo suministra aproximadamente la mitad de su luz, porque solamente recibe los medios ciclos positivos. Para comprobar que el triac si esté apagado cada vez que la onda de la corriente de trabajo pasa por su nivel cero, la bombilla se debe apagar cuando se desconecte la resistencia de polarización del gate(esto sirve para comprobar que el dispositivo no esté en cortocircuito).</p>
+                        <h4>Prueba con el ohmetro o multimetro</h4>
+                        <p>Debido a que todos los medidores de resistencia tienen una fuente de corriente contínua(Pilas), se pueden verificar con este instrumento la gran mayoría de rectificadores SCR y TRIACs. Este procedimiento no sirve para los QUADRAC, ya que para estos necesitamos una señal de gatillado superior a los 20 voltios, y los ohmetros y multimetros sólo tienen 3 voltios. No se aconseja hacer estos chequeos con instrumentos que sólo usan una pila de 1.5 voltios, pues la señal que entregan no alcanza ni para probar LEDs(diodo emisor de luz).</p>
+                        <p><b>Procedimiento: </b>Coloquemos el ohmetro o multimetro en la escala para medir baja resistencia (R x 1). Coloquemos el caimán positivo (rojo) al cátodo del SCR, y conectemos el ánodo al cable negativo (negro), podrá parecer incorrecto, puesto que se ha dicho que el ánodo debe quedar positivo, pero resulta que las corrientes de salida en los terminales del instrumento tienen polaridad contraria a la que señalan sus signos y colores. <br>En este momento la aguja del medidor señala alta resistencia(si es que se mueve ). Ahora hagamos un puente entre los terminales gate y ánodo, esto acasionará que la aguja suba a una posición de baja resistencia, y se debe conservar allí aunque retiremos el puente que unió estos 2 terminales y suministró la señal de gatillado. <br>Si se trata de un triac, hagamos primero la prueba anterior, luego, invertimos los terminales del ohmetro(es posible que en esta última posición no se sostenga la aguja en su lugar de baja resistencia cuando reitre el puente, pero esto se debe a que la baja corriente del instrumento medidor no alcanza para mantener encendido el triac en esta polaridad). Para las pruebas, TP1 equivale al cátodo, y TP2 al ánodo.</p>
+                        <img src="img/u2/ohmetro.gif" alt="ohmetro">
+                    </div>
+                </div>
+                <div class="tema">
+                    <h3 id="2.2">2.2 Amplificadores operacionales (OPAM)</h3>
+                    <p>El componente electrónico conocido como amplificador operacional es realmente un circuito complejo formado por muchos transistores y otros componentes en un solo circuito integrado. <br>El amplificador operacional tiene dos entradas. En la primera etapa se amplifica levemente la diferencia de las mismas. Esto se suele expresar también diciendo que se amplifica el modo diferencial de las señales, mientras que el modo común se rechaza. Posteriormente se pasa a segunda etapa de ganancia intermedia, en la que se amplifica nuevamente el modo diferencial filtrado por la primera. La ganancia total es muy elevada, típicamente del orden de 105. Finalmente, en la última etapa no se amplifica la tensión, sino que se posibilita el suministrar fuertes intensidades. <br>Para que este dispositivo pueda funcionar es obvio que necesitará una fuente de alimentación que polarice sus transistores internos. Habitualmente se emplean dos fuentes de alimentación, una positiva y otra negativa. De este modo se permite que la salida sea de uno u otro signo. Evidentemente, la tensión de salida nunca podrá superar los límites que marquen las alimentaciones. No olvidemos que el operacional está formado por componentes no generadores. <br>Una vez realizada esta presentación, hay que aclarar que en la mayoría de los casos, es posible conocer el comportamiento de un circuito en el que se inserta un operacional sin tener en cuenta su estructura interna. Para ello vamos a definir, como siempre, un componente ideal que nos permita una primera aproximación. Y también como es habitual, los cálculos rigurosos necesitarán de modelos más complejos, para los que sí es necesario estudiarlo más profundamente. <br>El operacional tiene cinco terminales:</p>
+                    <li>Entrada no inversora (V+)</li>
+                    <li>Entrada inversora (V-)</li>
+                    <li>Alimentación positiva (ECC)</li>
+                    <li>Alimentación negativa (-ECC)</li>
+                    <li>Salida (VOUT)</li>
+                    <p>A la hora de resolver circuitos se suelen omitir las alimentaciones, ya que como se verá, no afectan al funcionamiento. La representación circuital está formada por una resistencia de entrada, que une los dos terminales, y un generador de tensión de salida. La tensión de salida es proporcional a la diferencia de las entradas. <br>Las características más relevantes del amplificador operacional son:</p>
+                    <li>Resistencia de entrada muy elevada: A menudo es mayor que 1 M.</li>
+                    <li>Ganancia muy elevada: Mayor que 105.</li>
+                    <p>Las consecuencias que se derivan de estas características son:</p>
+                    <li>La corriente de entrada es nula: Al ser la resistencia de entrada tan elevada, la corriente que circula por los terminales inversor y no inversor puede despreciarse.</li>
+                    <li>La ganancia puede considerarse infinita.</li>
+                    <h4>La realimentación</h4>
+                    <p>El concepto de realimentación implica que la entrada del amplificador operacional no es independiente de la salida. Parte de la señal de salida se aplica a la entrada, con lo que se puede controlar la ganancia.</p>
+                    <h4>Amplificador no inversor</h4>
+                    <img src="img/u2/amplificador%20no%20inversor.gif" alt="amplificador no inversor">
+                    <br><b>Ecuaciones del circuito:</b><br><i>e+ = VIN </i><br><i>e- = - R1 I1 => I1 VOUT = - I1 (R1 + R2)</i>
+                    <p>Como características más llamativas cabe destacar:</p>
+                    <li>Ganancia del circuito independiente de la del operacional.</li>
+                    <li>Ganancia fijada por el cociente de dos resistencias.</li>
+                    <li>Resistencia de entrada R1.</li>
+                    <li>La entrada y la salida son de signo opuesto (inversor).</li>
+                    <h4>Comparador</h4>
+                    <p>Suponiendo que el operacional se alimenta a ECC: </p>
+                    <i>VIN > VREF => VOUT = ECC </i><br><i>VIN > VREF => VOUT = - ECC</i>
+                </div>
+                <div class="tema">
+                    <h3 id="2.3">2.3 Fuentes de voltaje</h3>
+                    <p>Cuando trabajamos con circuitos electrónicos, se requiere una necesidad básica que es proveer de una fuente eléctrica para que funcione. Si esta toma de energía, el circuito no servirá de nada. El propósito principal de una fuente de alimentación, es hacer entrega de una o más tensiones eléctricas que pueden ser variables al circuito, con la suficiente capacidad para mantener las condiciones de operación ideales. Hay muchos tipos de fuentes de alimentación, y pueden ser de tamaño y formas variadas. Se puede decir que todos los dispositivos electrónicos que conocemos tienen uno de estos aparatos integrados, desde nuestro televisor, microondas, hasta el ordenador que tenemos en casa. <br><br>Aunque cada fuente de alimentación tiene sus propias especificaciones y características individuales, todas ellas tienen ciertas cosas en común. Veremos las partes principales de las fuentes de alimentación y como funcionan todas juntas. <br><br>Una fuente de alimentación básica consiste en tres secciones básicas. Dependiendo de los requerimientos de cada dispositivo, las secciones pueden ser simples o extremadamente complejas. Cada parte sirve para un o más propósitos, y son los siguientes:</p>
+                    <h4>Transformador</h4>
+                    <p>En general, la corriente continua presente en las tomas de electricidad de nuestras casa, no es la adecuada para los circuitos electrónicos. Muchos de ellos necesitan un voltaje bastante menor, mientras que otros requieren que sea mayor. El transformador sirve para convertir la tensión AC (corriente alterna), a un nivel de voltaje más apropiado para las necesidades del circuito. Al mismo tiempo, también provee de aislamiento eléctrico entre la línea AC y el circuito que está siendo alimentado, lo cual es una consideración de seguridad importante. <br><br>Sin embargo, un transformador de línea es generalmente grande y pesado, y más bien caro. Por este motivo, algunas fuentes de alimentación (por ejemplo de los PCs), están diseñadas de forma deliberada para operar directamente desde la línea AC sin un transformador de línea. La salida del transformador sigue siendo un voltaje AC, pero con la magnitud apropiada para que el circuito pueda ser alimentado.</p>
+                    <img src="img/u2/280px-Transformer_under_load.svg.png" alt="Transformador">
+                    <h4>Rectifiador</h4>
+                    <p>El siguiente paso es forzar la corriente para que vaya en una dirección, previniendo alteraciones que ocurren en el transformador y la línea AC. Este proceso se conoce como rectificación, y el circuito que realiza la tarea es el rectificador. Hay configuraciones de rectificadores muy diferentes para ser usados en situaciones muy distintas, dependiendo de lo que requiera el circuito. La salida del rectificador en una voltaje DC (corriente continua), que todavía conserva algunas variaciones de la línea AC y el transformador.</p>
+                    <h4>Filtro</h4>
+                    <p>El voltaje DC del rectificador es generalmente no apropiado aun para dar carga al circuito. Es una tensión de pulsaciones que normalmente varían de cero voltios al pico de salida del transformador. Por ello, insertamos un circuito para almacenar energía durante cada pico de voltaje, y entonces liberarlo cuando ese pico vuelve a bajar. Este circuito se llama filtro, y su trabajo es reducir las pulsaciones del rectificador a un voltaje menor. <br><br>Cada una de los apartados que se han explicado tiene un número de variaciones, pero aparte de ellas, cumplen con las tareas que se les ha asignado. Sin embargo, algunos circuitos hacen su trabajo más efectivamente que otros. Para medir la efectividad de cada circuito, se compara la magnitud del componente AC resultante, con el componente DC del total del voltaje de salida. El promedio del voltaje AC al DC se conoce como factor “ripple”. La meta de cualquier fuente de alimentación es reducir este factor lo máximo posible, o al menos al punto donde la carga del circuito no se verá afectado por los restos de la corriente alterna.</p>
+                </div>
+        </section>
+        
+        <section class="unidad hidden" id="unidad3">
+                <h2>Unidad 3: Electronica digital</h2>
+                <div class="tema">
+                   <h3 id="3.1">3.1 Compuertas lógicas y tablas de verdad</h3>
+                   <p>Una compuerta lógica es un dispositivo utilizado en Electrónica Digital que trabaja con estados lógicos tanto en sus entradas como en salidas, posee caracteristicas especiales individuales que corresponden a leyes aritmeticas. Las entradas de estos dispositivos se acostumbra representarlas con las primeras letras del alfabeto y las salidas con las últimas. <br><br>Internamente una compuerta está formada por transistores, que se encuentran con arreglos especiales de manera que la funcion operacional coincida con la definición de cada una de ellas. <br><br>Las compuertas además de tener un símbolo esquemático que las distingue posee una expresión representativa para cada una de ellas, a dicha expresión se le conoce como expresión booleana y consiste en proporcionar una información de la operación que realiza.</p>
+                   <h4>Compuerta AND</h4>
+                   <p>Con dos o más entradas, esta compuerta realiza la función de la multiplicación. Su salida será un 1 cuando todas sus entradas también estén en nivel alto. En cualquier otro caso, la salida será un 0. El operador AND se lo asocia a la multiplicación, de la misma forma que al operador SI se lo asociaba a la igualdad. En efecto, el resultado de multiplicar entre si diferentes valores binarios solo dará como resultado 1 cuando todos ellos también sean 1, como se puede ver en su tabla de verdad. Matemáticamente se lo simbolizará con el signo x.</p>
+                   <img src="img/u3/CompuertaAND.gif" alt="Compuerta AND">
+                   <h4>Compuerta OR</h4>
+                   <p>La función que realiza la compuerta OR es la asociada a la suma, y matemáticamente la expresamos como +. Esta compuerta presenta un estado alto en su salida cuando al menos una de sus entradas también esta en estado alto. En cualquier otro caso, cuando todas sus entradas son 0 la salida será 0. Tal como ocurre con otras compuertas, el número de entradas puede ser mayor a dos</p>
+                   <img src="img/u3/CompuertaOR.gif" alt="Compuerta OR">
+                   <h4>Compuerta NOT</h4>
+                   <p>Esta compuerta presenta en su salida un valor que es el opuesto del que está presente en su única entrada. En efecto, su función es la negación, y el círculo en la salida significa que proporciona el estado opuesto. Se utiliza cuando es necesario tener disponible un valor lógico opuesto a uno dado. La figura muestra el símbolo utilizado en los esquemas de circuitos para representar esta compuerta, y su tabla de verdad. A menudo se le conoce como inversor.</p>
+                   <img src="img/u3/Compuertanot.gif" alt="Compuerta NOT">
+                   <h4>Compuerta XOR</h4>
+                   <p>La compuerta Or exclusiva realiza la operación lógica correspondiente a comparación, es decir, una de las entradas deben estar en 1 y la otra en 0 para que la salida sea 1. En caso de que ambas entradas estén al mismo nivel lógico la salida pasará a 0. Nótese que en la expresión booleana el signo + está rodeado por un circulo.</p>
+                   <h4>Compuerta NAND</h4>
+                   <p>Cualquier compuerta lógica se puede negar, esto es, invertir el estado de su salida, simplemente agregando una compuerta NOT que realice esa tarea. Debido a que es una situación muy común, se fabrican compuertas que ya están negadas internamente. La compuerta NAND es simplemente la negación de la compuerta AND vista anteriormente. Esto modifica su tabla de verdad, de hecho la invierte (se dice que la niega) quedando que la salida solo será un 0 cuando todas sus entradas estén en 1. El pequeño círculo en su salida es el que simboliza la negación. El numero de entradas debe ser como mínimo de dos, pero no es raro encontrar NAND de 3 o mas entradas.</p>
+                   <h4>Compuerta NOR</h4>
+                   <p>Una compuerta Nor es la negación de una compuerta Or, obtenida agregando una etapa Not en su salida. Si se observa su tabla de verdad, la salida de una compuerta Nor es 1 solamente cuando todas sus entradas son 0. La negación se expresa en los esquemas mediante un círculo en la salida. El número de entradas también puede ser mayor a dos.</p>
+                   <h4>Compuerta Exnor</h4>
+                   <p>Una compuerta Exnor (XNOR) no es más que una Exor con su salida negada, por lo que su salida estará en estado alto solamente cuando sus entradas son iguales, es decir tengan el mismo nivel lógico y la salida estará en estado bajo para cuando las entradas estén a diferente nivel lógico.</p>
+                   <h4>Compuerta Yes</h4>
+                   <p>Realiza la función booleana de la igualdad. Su tabla de verdad es también sencilla: la salida toma siempre el valor de la entrada. Esto significa que si en su entrada hay un nivel de tensión alto, también lo habrá en su salida; y si la entrada se encuentra en nivel bajo, su salida también estará en ese estado. En electrónica, generalmente se utilizan compuertas Yes para aumentar el nivel lógico cuando ya esta débil, como si fueran amplificadores.</p>
+                    <div class="subtema">
+                        <h3 id="3.1.1">3.1.1 Lógica TTL</h3>
+                        <p>Una familia lógica es un grupo de dispositivos digitales que comparten una tecnología común de fabricación y tienen estandarizadas sus características de entrada y de salida; es decir, son compatibles entre sí. Como consecuencia de la estandarización, la interconexión entre dispositivos lógicos de una misma familia es particularmente sencilla y directa: no requiere de etapas adicionales de acoplamiento.</p>
+                        <h4>Características generales de las familias lógicas</h4>
+                        <p>Las características más importantes de un circuito digital son su velocidad, su consumo de potencia, su inmunidad al ruido y su confiabilidad.</p>
+                        <li>La velocidad mide la rapidez de respuesta de las salidas de un circuito digital a cualquier cambio en sus entradas.</li>
+                        <li>El consumo de potencia mide la cantidad de corriente o de potencia que consume un circuito digital en operación.</li>
+                        <li>La inmunidad al ruido mide la sensibilidad de un circuito digital al ruido electromagnético ambiental.</li>
+                        <li>La confiablidad mide el período útil de servicio de un circuito digital.</li>
+                        <h4>Familia lógica T.T.L</h4>
+                        <p>La familia lógica TTL es la más común de todas las familias lógicas. Los circuitos integrados TTL implementan su lógica interna, exclusivamente basándose en transistores NPN y PNP, diodos y resistencias. La familia TTL está disponible en dos versiones: la serie 54 y la serie 74. La primera se destina a aplicaciones militares y la segunda a aplicaciones industriales y de propósito general. La familia TTL o bipolar se divide en las siguientes categorías o subfamilias básicas:</p>
+                        <li>TTL estándar.</li>
+                        <li>TTL Schottky (S).</li>
+                        <li>TTL de baja potencia (L).</li>
+                        <li>TTL Schottky de baja potencia (LS).</li>
+                        <li>TTL de alta velocidad (H).</li>
+                        <li>TTL Schottky avanzada (AS).</li>
+                        <li>TTL Schottky de baja potencia avanzada (ALS).</li>
+                        <h4>Tensión de alimentación (+ VCC)</h4>
+                        <p>Los circuitos TTL en general, pueden operar con tensiones entre 4.75 V. y 5.25 V. Pero el valor nominal de la tensión de trabajo es de + 5 volts.</p>
+                        <h4>Niveles de voltaje</h4>
+                        <li>De 0 V. a 0.8 V. para el estado bajo.</li>
+                        <li>De 2.4 V. A 5 V. para el estado alto.</li>
+                        <h4>FAMILIA LÓGICA CMOS</h4>
+                        <p>La familia lógica CMOS, utiliza transistores MOSFET complementarios canal N y canal P como elementos básicos de conmutación. Los circuitos integrados digitales fabricados mediante tecnología CMOS se pueden agrupar en las siguientes categorías o subfamilias básicas:</p>
+                        <li>CMOS estándar.</li>
+                        <li>CMOS de alta velocidad (HC).</li>
+                        <li>CMOS compatible con TTL (HCT).</li>
+                        <li>CMOS equivalente a TTL (C).</li>
+                        <p>Familia CMOS estándar. La familia CMOS estándar comprende principalmente los dispositivos que se designan como 40XX (4012, 4029, etc.) y 45XX (4528, 4553, etc.). Existen dos series generales de dispositivos CMOS designadas “A” y “B”. Los dispositivos de la serie “A” se designan con el sufijo “A” o simplemente no lo traen impreso (4011A = 4011). Todos los dispositivos de la serie “B” llevan el sufijo B. La principal diferencia entre los dispositivos de las series A y B esta en que los CMOS “B” contienen una circuiteria interna de protección que reduce el riesgo de daño al dispositivo por el fenómeno de descarga electrostática.</p>
+                        <b>Tensión de alimentación (+ VDD)</b>
+                        <p>Tienen un amplio margen de tensión comprendido entre + 3 V. y + 18 V.</p>
+                        <b>Niveles de voltaje</b>
+                        <li>De 0 V. a 0.3 VDD para el estado bajo.</li>
+                        <li>De 0.7 VDD a VDD para el estado alto.</li>
+                        <h4>PRECAUCIONES A TOMAR EN EL MANEJO DE DISPOSITIVOS CMOS.</h4>
+                        <p>Todos los dispositivos CMOS son muy susceptibles al daño ocasionado por descarga electrostática entre cualquier par de pines. La electrostática o electricidad estática consiste en la creación de altos voltajes en la superficie de un material aislante por efecto de fricción o frotamiento.</p>
+                        <li>Conservar el circuito integrado en su contenedor original hasta que sea insertado en el circuito de aplicación.</li>
+                        <li>Conectar todas las entradas no empleadas a un nivel estable. No dejarlas sin conectar.</li>
+                        <li>Verificar la polaridad de la fuente de alimentación. El positivo debe ir al pin +VDD y el negativo o tierra al pin VSS.</li>
+                        <h4>INTERFACES LOGICAS</h4>
+                        <p>Una interface es la interconexión eficiente de dos dispositivos, circuitos o sistemas que no son compatibles entre sí y tienen características eléctricas diferentes. Las interfaces lógicas o reales permiten que dispositivos de diferentes familias o subfamilias puedan comunicarse entre sí.</p>
+                        <h4>Interfaces entre familias lógicas</h4>
+                        <p>Existen situaciones donde se hace necesario interconectar dispositivos pertenecientes a diferentes familias lógicas con el fin de aprovechar las ventajas que cada tecnología ofrece. Para que esta interconexión sea eficiente, deben conocerse las características de entrada y de salida de las familias lógicas comprometidas. Cada familia lógica interpreta de manera diferente un nivel alto o bajo de voltaje y tiene sus propios requisitos de corriente de entrada y de salida. Por esta razón, dos familias lógicas no se pueden conectar directamente: necesitan de una interface que las comunique y acople sus características de voltaje y corriente.</p>
+                        <h4>Interfaces de TTL a CMOS</h4>
+                        <p>Una entrada CMOS es relativamente fácil de manejar a partir de una salida TTL cuando los dispositivos involucrados en la interface operan a partir de una misma fuente de + 5 V. Las características de corriente de salida de TTL son más que adecuadas para manejar entradas CMOS. Sólo deben hacerse compatibles los niveles de voltaje.</p>
+                        <h4>Interface TTL estándar a CMOS con resistencia.</h4>
+                        <p>La resistencia R acopla los niveles de voltaje de ambas familias. Su valor fluctúa entre 330 Ω y 15 KΩ. Un valor típico es de 1 KΩ.</p>
+                        <h4>Interface TTL-LS a CMOS con resistencia.</h4>
+                        <p>La resistencia R acopla los niveles de voltaje de ambas familias.</p>
+                        <h4>Interface de un dispositivo CMOS con un voltaje diferente de + 5V.</h4>
+                        <p>Cuando el dispositivo CMOS opera a un voltaje de alimentación diferente de + 5V, la interface entre una salida TTL, y una entrada CMOS es más compleja, pero existen varias formas de hacerlo.</p>
+                        <h4>Interface de TTL a CMOS con colector abierto.</h4>
+                        <p>Este método emplea una salida de TTL de colector abierto de alto voltaje conectada a la entrada CMOS a través de una resistencia de pull-up. Este método es muy apropiado para muchas aplicaciones, pero presenta el inconveniente de ser muy susceptible al ruido.</p>
+                        <img src="img/u3/colector%20abierto.png" alt="colector abierto">
+                        <h4>Interface básica de TTL a CMOS con transistor.</h4>
+                        <p>Una solución más adecuada es emplear un transistor de propósito general conectado en la configuración de emisor común. El transistor y las resistencias R1 y R2 desplazan los niveles necesarios para operar los niveles de voltaje de la salida TTL, a los valores necesarios para operar la entrada CMOS.</p>
+                        <h4>Interface mejorada de TTL a CMOS.</h4>
+                        <p>En esta interfaz se emplean dos resistencias (R1 y R2) en el circuito base para mejorar la inmunidad al ruido. El condensador C reduce el tiempo que dura un cambio en la salida TTL en manifestarse en la entrada CMOS. Es decir, mejora la velocidad de la interface.</p>
+                        <img src="img/u3/interface%20mejorada.png" alt="interface mejorada">
+                        <h4>Interfaces de CMOS a TTL</h4>
+                        <p>Una salida CMOS puede manejar directamente una entrada 74LS ó 74L cuando ambos dispositivos operen a partir de una misma fuente de + 5 V.</p>
+                        <h4>Interface directa de CMOS a TTL estándar.</h4>
+                        <p>Una salida CMOS no puede manejar directamente una entrada TTL estándar debido a su limitada capacidad de corriente. Las únicas excepciones son los circuitos integrados 4001B y 4002B.</p>
+                        <h4>Interface de CMOS a TTL-LS con resistencia.</h4>
+                        <p>Esta interface es una forma muy sencilla de conectar una salida CMOS a una entrada TTLLS. El diodo D bloquea el voltaje procedente de la salida CMOS cuando esta última está en el estado alto. La resistencia R hace alta la entrada TTL cuando el diodo queda inversamente polarizado. Se emplea un diodo de germanio para mejorar la inmunidad al ruido.</p>
+                        <h4>Interface de CMOS a TTL con transistor.</h4>
+                        <p>Este método emplea un transistor NPN de propósito general. Este transistor, en conjunto con sus resistencias de polarización (R1, R2 y R3), convierte niveles lógicos CMOS en niveles lógicos TTL.</p>
+                    </div>
+                    <div class="subtema">
+                        <h3 id="3.1.2">3.1.2 Algebra de Boole</h3>
+                        <p>UN ÁLGEBRA DE BOOLE ES UN SISTEMA DE ELEMENTOS B={0,1} Y LOS OPERADORES BINARIOS (·) y (+) y (’)</p>
+                        <li>OPERADOR + -> OPERADOR OR</li>
+                        <li>OPERADOR · -> OPERADOR AND</li>
+                        <li>OPERADOR ‘ -> OPERADOR NOT</li>
+                        <p>PROPIEDAD CONMUTATIVA:</p>                        
+                        <li>A + B = B + A</li>
+                        <li>A · B = B · A</li>
+                        <p>PROPIEDAD DISTRIBUTIVA:</p>
+                        <li>A·(B+C) = A·B + A·C</li>
+                        <li>A + B·C = (A+B)·(A+C)</li>
+                        <p>ELEMENTOS NEUTROS DIFERENTES:</p>
+                        <li>A + 0 = A</li>
+                        <li>A · 1 = A</li>
+                        <p>SIEMPRE EXISTE EL COMPLEMENTO DE A, DENOMINADO A’:</p>
+                        <li>A + A’ = 1</li>
+                        <li>A · A’ = 0</li>
+                        <h4>Principio de dualidad</h4>
+                        <p>Cualquier teorema o identidad algebraica deducible de los postulados anteriores puede transformarse en un segundo teorema o identidad válida sin mas que intercambiar (+) por (·) y 1 por 0.</p>
+                        <h4>Constante</h4>
+                        <p>Cualquier elemento del conjunto B</p>
+                        <h4>TEOREMAS DEL ÁLGEBRA DE BOOLE</h4>
+                        <p>TEOREMA 1: el elemento complemento A’ es único. <br>TEOREMA 2 (ELEMENTOS NULOS): para cada elemento de B se verifica <li>A+1 = 1</li>
+                        <li>A·0 = 0</li></p>
+                        <p>TEOREMA 3: cada elemento identidad es el complemento del otro. <li>0’=1</li><li>1’=0</li></p>
+                        <p>TEOREMA 4 (IDEMPOTENCIA): para cada elemento de B, se verifica <li>A+A=A</li><li>A·A=A</li></p>
+                        <p>TEOREMA 5 (INVOLUCIÓN): para cada elemento de B, se verifica <li>(A’)’ = A</li></p>
+                        <p>TEOREMA 6 (ABSORCIÓN): para cada par de elementos de B, se verifica <li>A+A·B=A</li><li>A·(A+B)=A</li></p>
+                        <p>TEOREMA 7: para cada par de elementos de B, se verifica <li>A + A’·B = A + B</li><li>A · (A’ + B) = A · B</li></p>
+                        <p>TEOREMA 8 (ASOCIATIVIDAD): cada uno de los operadores binarios (+) y (·) cumple la propiedad asociativa <li>A+(B+C) = (A+B)+C</li><li>A·(B·C) = (A·B)·C</li></p>
+                        <p>LEYES DE DEMORGAN: para cada par de elementos de B, se verifica <li>(A+B)’ = A’·B’</li><li>(A·B)’ = A’ + B’</li></p>
+                        <h4>REPRESENTACIÓN DE FUNCIONES LÓGICAS (I)</h4>
+                        <p>TABLA DE VERDAD: Tabla que representa el valor de la función para cada combinación de entrada. Si la función está definida para todas las combinaciones se llama completa, si no, se denomina incompleta. Una Fórmulas de conmutación es la expresión de una función Lógica.</p>
+                        <li>Un LITERAL es una variable (A) o complemento de una variable (A’)</li>
+                        <li>Un TÉRMINO PRODUCTO es una operación AND de un número de literales.</li>
+                        <li>Una fórmula normal disyuntiva es una suma de términos productos.</li>
+                        <li>Un TÉRMINO SUMA es una operación OR de un número de literales.</li>
+                        <h4>REPRESENTACIÓN DE FUNCIONES LÓGICAS (II)</h4>
+                        <p>FÓRMULA CANÓNICA DISYUNTIVA (SOP)</p>
+                        <li>MINTÉRMINO (mi): término producto en el que aparecen todas las variables, ya sean complementadas o sin complementar.</li>
+                        <li>FÓRMULA CANÓNICA DISYUNTIVA O DE MINTÉRMINOS: suma de mintérminos. (Suma de Productos) <br>Dada la lista completa de mintérminos y asignando 1’s y 0’s arbitrariamente a las variables, siempre hay un, y sólo un, mintérmino que toma el valor 1. <br>Un mintérmino es un término producto que es 1 exactamente en una línea de la tabla de Verdad. La fórmula compuesta por todos los mintérminos será idénticamente 1. Cada fórmula de conmutación puede expresarse como suma de mintérminos. Y esa fórmula es única. </li>
+                        <p>NOTACIÓN: Un mintérmino se designa por “mi” siendo i el número decimal correspondiente de la tabla de verdad. Para el producto, el 0 se asocia a la variable complementada y el 1 a la variable sin complementar.</p>
+                        <img src="img/u3/formaCanonicaDisyuntiva.png" alt="formaCanonicaDisyuntiva">
+                        <h4>REPRESENTACIÓN DE FUNCIONES LÓGICAS (III)</h4>
+                        <p>FÓRMULA CANÓNICA CONJUNTIVA (POS)</p>
+                        <li>MAXTÉRMINO (Mi): término suma en el que aparecen todas las variables, ya sean complementadas o sin complementar.</li>
+                        <li>Fórmula Canónica Conjuntiva o de Maxtérminos: producto de maxtérminos. (Producto de sumas). <br>Dada la lista completa de maxtérminos y asignando 1’s y 0’s arbitrariamente a las variables, siempre hay un y sólo un maxtérmino que toma el valor 0. <br>Un maxtérmino es un término suma que es 0 exactamente en una línea de la tabla de verdad. <br>La fórmula compuesta por todos los maxtérminos será idénticamente 0. Cada fórmula puede expresarse como producto de maxtérminos. Y es única. </li>
+                        <p>NOTACIÓN: Un maxtérmino se designa por “Mi” siendo i el número decimal correspondiente de la tabla de verdad. En la suma, el 1 se asocia a la variable complementada y el 0 a la variable sin complementar. E</p>
+                        <img src="img/u3/formaCanonicaConjuntiva.png" alt="formaCanonicaConjuntiva">
+                        <h4>REPRESENTACIÓN DE FUNCIONES LÓGICAS (IV)</h4>
+                        <p>CONVERSIÓN Y MANIPULACIÓN DE FÓRMULAS <br>El complemento de una fórmula de mintérminos está formado por la suma de los mintérminos que no aparecen. <br>El complemento de una fórmula de maxtérminos está formado por el producto de los maxtérminos que no aparecen.</p>
+                        <li>mi’ = Mi</li>
+                        <li>Mi’ = mi</li>
+                        <p>La transformación de una fórmula de mintérminos (disyuntiva) en otra de maxtérminos (conjuntiva) se basa en la doble complementación,</p>
+                        <li>(F’)’ = F</li>
+                        <p>Para FUNCIONES INCOMPLETAS en la tabla de verdad aparecerá una X o una letra d (del inglés don’t care) refiriéndose a términos sin especificar. Complemento de una función incompleta: otra función incompleta con los mismos términos “no importa” y el complemento de la función completa. <br>Las fórmulas de mintérminos y de maxtérminos de las funciones incompletas no son únicas.</p>
+                    </div>
+                    <div class="subtema">
+                        <h3 id="3.1.3">3.1.3 Miniterminos y Maxiterminos</h3>
+                        <p>A diferencia que los miniterminos en los maxiterminos utilizamos las salida falsas (0) y en caso que una de las variables sea verdadera (1) se tiene que cambiar falsa (0) y para eso se niega la variable un ejemplo seria cuando A = 0, B= 0, C = 1, A+B+C, en este caso hay una variable verdadera la cual se tiene que cambiar a falsa (0) y quedaría A = 0, B = 0, C’= 0, A+B+C’, esta seria la forma en que se obtiene cada uno de los maxiterminos. <br><br>Después de obtener cada uno de los maxiterminos entre estos se multiplica y la salida en función de los maxiterminos quedaría de la siguiente forma: <br><i>S = (A+B+C’) (A+B’+C) (A’+B+C) (A’+B+C’)</i> <br>SE LLAMA MINITERMINO A EL PRODUCTO DE TODAS LAS VARIABLES DE ENTRADA O SU NEGADO <br>Teniendo las salidas se utilizan únicamente las salidas verdaderas (1) y viendo el número de términos que son (en este caso 3, A, B, C) y cuando en la combinación es falsa (0) se cambia a verdadera (1), un ejemplo para cuando las variables son falsas(0) seria ABC = A’B’C’ en este caso se cambiaron todas las combinaciones que había ya que todas eran falsas se convierten a verdaderas para ello se tienen que negar y cuando todas las entradas o una es verdadera no se niega la variable y se queda como esta. <br>Después de haber obtenido cada uno de los miniterminos se unen en forma de suma y por lo consiguiente quedarían de las siguientes formas los miniterminos: <br><i>S = A’B’C’ + A’BC + ABC’ + ABC</i></p>
+                    </div>
+                </div>
+                <div class="tema">
+                    <h3 id="3.2">3.2 Técnica de simplificación</h3>
+                    <p>Una vez que se obtiene la expresión booleana para un circuito lógico, podemos reducirla a una forma más simple que contenga menos términos, la nueva expresión puede utilizarse para implantar un circuito que sea equivalente al original pero que contenga menos compuertas y conexiones.</p>
+                    <h4>EXPRESIONES BOOLENAS EN FORMA DE MINTERMINOS (SUMA DE PRODUCTOS).</h4>
+                    <p>Cuando se comienza un problema de diseño lógico, lo normal es construir primero una tabla de verdad, que detalle la operación exacta del circuito digital. Considerar la tabla de verdad 2, que contiene las variables C, B y y A. <br><br>Observar que sólo dos combinaciones de variables generan una salida 1. Estas combinaciones se muestran en la lineas octava y segunda (sombreadas) de la tabla de verdad. La linea 2 se lee « una entrada no C Y (AND) una entrada no B Y (AND) una entrada A generan una salida I ». <br>Esto se muestra en la parte derecha de la linea 2 con la expresión booleana C·B·A. La otra combinación de variables que genera un 1 se muestra en la linea 8 de la tabla de verdad. La linea 8 se lee «una entrada C Y (AND) una entrada B Y (AND) una entrada A generan una salida 1». La expresión booleana de la linea 8 aparece a la derecha y es C · B · A. <br>Estas dos posible combinaciones se relacionan mediante el operador OR para formar la expresión booleana completa de la tabla de verdad, que se muestra en la tabla 2, como C · B · A + C·B · A = Y. Esta expresión, a veces, se denomina forma en suma de productos de la expresión booleana. Los ingenieros también llaman a esta forma, forma de minterms. <br>Esta expresión puede traducirse al patrón AND-OR de puertas lógicas. El diagrama lógico de la Figura 5.3.c realiza la lógica descrita por la expresión booleana C · B · A + C ·B· A = Y , y genera la tabla de verdad 2.</p>
+                    <img src="img/u3/Expresion%20booleana.png" alt="Expresion booleana">
+                    <h4>Simplificación Algebraica</h4>
+                    <p>El álgebra booleana (Algebra de los circuitos lógicos tiene muchas leyes o teoremas muy útiles tales como: <br><b>Ley de Morgan</b></p>
+                    <li>A + B = A·B</li>
+                    <li>A*B = A + B</li>
+                    <p><b>Ley Distributiva</b></p>
+                    <li>A+(B·C) = (A+B)·(A+C)</li>
+                    <li>A·(B+C) = A·B+A·C</li>
+                    <p><b>Ademas de las leyes formales para las funciones AND y OR :</b></p>
+                    <li>A·0 = 0 ; A+0 = A</li>
+                    <li>A*1 = A ; A+1 = 1</li>
+                    <li>A*A = A ; A+A = A</li>
+                    <li>A*A = 0 ; A+A = 1</li>
+                    <p><b>Ley de la Involución:</b></p>
+                    <li>A(negada) = A</li>
+                    <p>Aplicando el álgebra booleana <br>A·B + A·B + A·B = Y <br> RAZONES</p>
+                    <li>= A·B + (A·B + A·B) , Propiedad asociativa</li>
+                    <li>= A·B + B·(A+A) , 4. [A·(B + C) = A·B + A·C] <br>= A·B + B·1 , 8. [A + A = 1]</li>
+                    <li>= A·B + B , 6. [B·1 = B]</li>
+                    <li>= B + A·B , Propiedad conmutativa</li>
+                    <li>= (B + A)·(B + B) , 3. [A + (B·C) = (A + B)·(A + C)]</li>
+                    <li>= (B + A)·1 , 8. [A + A = 1]</li>
+                    <li>= B + A , 6. [A * 1 = A]</li>
+                    <p>Concluimos entonces que una sola puerta OR de dos entradas realiza la misma función (¡ De hecho la tabla 1 corresponde a la función OR !)</p>
+                    <h4>DIAGRAMAS DE KARNAUGH</h4>
+                    <p>Es un metodo grafico que se utiliza para simplificar circuitos lógicos en un proceso simple y ordenado. Es metodo que se basa en los teoremas booleanos estudiados anteriormente y su utilidad practica se limita a 5 variables. Las reglas a seguir son las siguientes:</p>
+                    <li>A partir de la tabla de verdad sacar las expresiones booleanas en forma de minterns o maxterms.</li>
+                    <li>Colocar los 1 corespondientes en el diagrama por cada grupo de variables operadas por AND si es en forma de minterns u operadas por OR si es en forma de maxterms.</li>
+                    <li>Agrupar los 1 adyacentes (las agrupaciones se realizan en grupos de 2, 4, 8 1)</li>
+                    <li>Eliminar las variables que aparezcan con su complemento.</li>
+                    <li>Enlazamos con OR los resultados obtenidos (si es en forma de minterns) o con AND (si es en forma de maxterms).</li>
+                    <p>Luego procedemos a colocar cada 1 correspondiente en el diagrama por cada grupo de variables operadas con AND (para nuestro ejemplo). Los diagramas de Karnaugh pueden presentarse de dos maneras diferentes: la americana y la alemana, demos un vistazo a dichas presentaciones: <br>Diagramas de Karnaugh para 2 variables</p>
+                    <img src="img/u3/Americana,%20Alemana.gif" alt="Americana, Alemana">
+                    <p>Diagramas de Karnaugh para 3 variables</p>
+                    <img src="img/u3/Americana,%20Alemana,3variables.gif" alt="Americana, Alemana, 3 variables">
+                    <p>Luego procedemos a agrupar los 1 adyacentes que se encuentren en el diagrama, estas agrupaciones se realizan en grupos de 2, 4, o de 8 "1". Debemos tratar en lo posible de no realizar tantas agrupaciones. <br>Agrupación de términos <br><br>Despues de realizar las agrupaciones eliminanos por cada grupo las variables que aparezcan con su complemento. En el agrupamiento de 2 "1" se elimina una variable; en el agrupamiento de 4 "1" se eliminan 2 variables y en el agrupamiento de 8 "1" se eliminan 3 variables. <br>Eliminación de términos <br>Por ultimo enlazamos con OR (ya que nuestro ejemplo es en forma de minterns) los resultados que obtuvimos de la eliminación de variables. Q = A +B De esta manera la ecuacion logica Q=(A·B)+(A·B)+(A·B) nos quedaría reducida a una puerta OR</p>
+                </div>
+                <div class="tema">
+                    <h3 id="3.3">3.3 Métodos de diseño</h3>
+                    <p>Un sistema combinacional es un circuito lógico cuyas salidas están completamente determinadas en cualquier instante por los valores aplicados a sus variables de entrada. Son circuitos que no tienen bucles de realimentación, es decir una salida no puede usarse como entrada de una etapa anterior. En electrónica digital la lógica combinacional está formada por ecuaciones simples a partir de las operaciones básicas del álgebra de Boole. Entre los circuitos combinacionales clásicos tenemos: <br><i>Lógicos</i></p>
+                    <li>Generador/Detector de paridad</li>
+                    <li>Multiplexor y Demultiplexor</li>
+                    <li>Codificador y Decodificador</li>
+                    <li>Conversor de código</li>
+                    <li>Comparador</li>
+                    <p><i>Aritméticos</i></p>
+                    <li>Sumador</li>
+                    <p><i>Aritméticos y lógicos</i></p>
+                    <li>Unidad aritmético lógica</li>
+                    <p>Estos circuitos están compuestos únicamente por puertas lógicas interconectadas entre sí, sin ningún biestable o celda de memoria.</p>
+                    <h4>Funciones Combinacionales</h4>
+                    <p>Todos los circuitos combinacionales pueden representarse empleando álgebra de Boole a partir de su función lógica, generando de forma matemática el funcionamiento del sistema combinacional. De este modo, cada señal de entrada es una variable de la ecuación lógica de salida. Por ejemplo, un sistema combinacional compuesto exclusivamente por una puerta AND tendría dos entradas A y B. Su función combinacional sería {\displaystyle F=A\cdot B} F=A\cdot B, para una puerta OR sería {\displaystyle F=A+B\,} F=A+B\,. Estas operaciones se pueden combinar formando funciones más complejas. Esto permite emplear diferentes métodos de simplificación para reducir el número de elementos combinacionales que forman el sistema.</p>
+                    <h4>Circuito Multiplexor</h4>
+                    <p>Los multiplexores son circuitos combinacionales con varias entradas y una única salida de datos. Están dotados de entradas de control capaces de seleccionar una, y sólo una, de las entradas de datos para permitir su transmisión desde la entrada seleccionada hacia dicha salida. <br>En el campo de la electrónica el multiplexor se utiliza como dispositivo que puede recibir varias entradas y transmitirlas por un medio de transmisión compartido. Para ello lo que hace es dividir el medio de transmisión en múltiples canales, para que varios nodos puedan comunicarse al mismo tiempo. Una señal que está multiplexada debe demultiplexarse en el otro extremo. <br>Según la forma en que se realice esta división del medio de transmisión, existen varias clases de multiplexación:</p>
+                    <li>Multiplexación por división de frecuencia</li>
+                    <li>Multiplexación por división de tiempo</li>
+                    <li>Multiplexación por división de código</li>
+                    <li>Multiplexación por división de longitud de onda</li>
+                    <h4>Demultiplexor</h4>
+                    <p>En electrónica digital, un demultiplexor es un circuito combinacional que tiene una entrada de información de datos d y n entradas de control que sirven para seleccionar una de las 2n salidas, por la que ha de salir el dato que presente en la entrada. Esto se consigue aplicando a las entradas de control la combinación binaria correspondiente a la salida que se desea seleccionar. Por ejemplo, si queremos que la información que tenemos en la entrada d, salga por la salida S4, en la entrada de control se ha de poner, de acuerdo con el peso de la mísma, el valor 100, que es el 4 en binario.</p>
+                    <h4>Codificacor</h4>
+                    <p>Un codificador es un circuito combinacional con 2N entradas y N salidas, cuya misión es presentar en la salida el código binario correspondiente a la entrada activada. Existen dos tipos fundamentales de codificadores: codificadores sin prioridad y codificadores con prioridad. En el caso de codificadores sin prioridad, puede darse el caso de salidas cuya entrada no pueda ser conocida: por ejemplo, la salida 0 podría indicar que no hay ninguna entrada activada o que se ha activado la entrada número 0. Además, ciertas entradas pueden hacer que en la salida se presente la suma lógica de dichas entradas, ocasionando mayor confusión. Por ello, este tipo de codificadores es usado únicamente cuando el rango de datos de entrada está correctamente acotado y su funcionamiento garantizado.</p>
+                    <h4>Decodificador</h4>
+                    <p>Un decodificador o descodificador es un circuito combinacional, cuya función es inversa a la del codificador, es decir, convierte un código binario de entrada (natural, BCD, etc.) de N bits de entrada y M líneas de salida (N puede ser cualquier entero y M es un entero menor o igual a 2N), tales que cada línea de salida será activada para una sola de las combinaciones posibles de entrada. Normalmente, estos circuitos suelen encontrarse como decodificador / demultiplexor. Esto es debido a que un demultiplexor puede comportarse como un decodificador.</p>
+                    <h4>Aplicaciones de un decodificador</h4>
+                    <p>Su función principal es la de direccionar espacios de memoria. Un decodificador de N entradas es capaz de direccionar 2N espacios de memoria. <br>Para poder direccionar 1Kib de memoria se necesitarían 10 bits, ya que la cantidad de salidas seria 210, igual a 1024. <br>De esta manera:</p>
+                    <li>Con 20 bits se tienen 220 lo que equivale a 1Mib.</li>
+                    <li>Con 30 bits se tienen 230 lo que equivale a 1Gib.</li>
+                    <h4>Conversor de código</h4>
+                    <p>Un conversor de código puede hacerse simplemente conectando un decodificador a un codificador. Por ejemplo, podemos imaginar un decodificador de binario natural BCD, es decir, un descodificador con 4 entradas y 16 salidas de las que utilizamos 10 (las correspondientes a las combinaciones binarias en BCD de los dígitos decimales desde el 0 hasta el 9. Estas 10 salidas las conectamos a las entradas de un codificador de código binario Gray, el cuál tendrá 4 salidas. Acabamos de hacer un conversor de código de BCD natural a binario Gray. <br>En resumen, se puede decir que un conversor de código es un elemento lógico que traduce una palabra de "n" bits a otra de "m" bits las cuales se refieren al mismo valor decimal, pero en "distintos códigos". En el ejemplo anterior los códigos son el binario natural y el Gray.</p>
+                    <h4>Circuito Comparador</h4>
+                    <p>Un circuito comparador combinatorio compara dos entradas binarias (A y B de n bits) para indicar la relación de igualdad o desigualdad entre ellas por medio de "tres banderas lógicas" que corresponden a las relaciones A igual B, A mayor que B y A menor que B. Cada una de estas banderas se activara solo cuando la relación a la que corresponde sea verdadera, es decir, su salida será 1 y las otras dos producirán una salida igual a cero. <br>Dentro de la familia de circuitos TTL se les denomina a estos circuitos con el número 7485 y manejan entradas de 4 bits, además de que también se les puede conectar en cascada para manejar entradas más grandes.</p>
+                    <h4>Sumador</h4>
+                    <p>Un sumador es un circuito digital que realiza la adición de números. En muchas computadoras y otros tipos de procesadores se utilizan sumadores en las unidades aritméticas lógicas. También se utilizan en otras partes del procesador, donde se utilizan para calcular direcciones, índices de tablas, operadores de incremento y decremento y operaciones similares.</p>
+                    <img src="img/u3/Sumador.png" alt="sumador">
+                    <p>Aunque los sumadores se pueden construir para muchas representaciones numéricas, tales como decimal codificado en binario o exceso-3, los sumadores más comunes funcionan en números binarios. En los casos en que se utiliza el complemento a dos o el complemento a uno para representar números negativos, es trivial modificar un sumador para convertirlo en un sumador-restador. Otras representaciones de números con signo requieren más lógica alrededor del sumador básico.</p>
+                    <img src="img/u3/FuncionamientoSumador.gif" alt="Funcionamiento Sumador">
+                </div>
+                <div class="tema">
+                    <h3 id="3.4">3.4 Temporizadores</h3>
+                    <p>El 555 es un circuito integrado cuya función principal es producir pulsos de temporización con precisión, entre sus funciones secundarias están la de oscilador, divisor de frecuencia, modulador o generador. <br>Este circuito integrado incorpora dentro de si, dos comparadores de voltaje, un flip flop, una etapa de salida de corriente, un divisor de voltaje por resistor y un transistor de descarga. Dependiendo de como se interconecten estas funciones utilizando componentes externos es posible conseguir que dicho circuito realiza un gran numero de funciones tales como la del multivibrador astable y la del circuito monoestable. <br>El 555 tiene diversas aplicaciones, como: Control de sistemas secuenciales, divisor de frecuencias, modulación por ancho de pulso, generación de tiempos de retraso, repetición de pulsos, etc.</p>
+                    <img src="img/u3/555.gif" alt="555">
+                    <h4>Funcionamiento</h4>
+                    <p>Se alimenta de una fuente externa conectada entre sus terminales 8 (+Vcc) y 1(GND) tierra; el voltaje de la fuente va desde los 5 voltios hasta 15 voltios de corriente continua, la misma fuente se conecta a un circuito pasivo RC, que proporciona por medio de la descarga de su capacitor una señal de voltaje que esta en función del tiempo, esta señal de tensión es de 1/3 de Vcc y se compara contra el voltaje aplicado externamente sobre la terminal 2 (TRIGGER) que es la entrada de un comparador. <br>La terminal 6 (THRESHOLD) se ofrece como la entrada de otro comparador, en la cual se compara a 2/3 de la Vcc contra la amplitud de señal externa que le sirve de disparo. <br>La terminal 5(CONTROL VOLTAGE) se dispone para producir modulación por anchura de pulsos, la descarga del condensador exterior se hace por medio de la terminal 7 (DISCHARGE), se descarga cuando el transistor (NPN) T1, se encuentra en saturación, se puede descargar prematuramente el capacitor por medio de la polarización del transistor (PNP) T2.</p>
+                    <h4>Circuito astable básico</h4>
+                    <p>Si se usa en este modo el circuito su principal característica es una forma de onda rectangular a la salida, en la cual el ancho de la onda puede ser manejado con los valores de ciertos elementos en el diseño. <br>Para esto debemos aplicar las siguientes formulas:</p>
+                    <li>TA = 0.693 * (R1+R2) * C1</li>
+                    <li>TB = 0.693 * (R2*C1)</li>
+                    <p>Donde TA es el tiempo del nivel alto de la señal y TB es el tiempo del nivel bajo de la señal. Estos tiempo dependen de los valores de R1 y R2. Recordemos que el periodo es = 1/f. <br>La frecuencia con que la señal de salida oscila está dada por la fórmula: f = 1/(0.693 * C1 * (R1 + 2 * R2))</p>
+                    <img src="img/u3/circuito%20astable%20basico.gif" alt="circuito astable basico">
+                    <h4>Circuito monoestable</h4>
+                    <p>En este caso el timmer 555 en su modo monoestable funcionará como un circuito de un tiro. Dentro del 555 hay un transistor que mantiene a C1 descargado inicialmente. Cuando un pulso negativo de disparo se aplica a terminal 2, el flip-flop interno se setea, lo que quita el corto de C1 y esto causa una salida alta (un high) en el terminal 3 (el terminal de salida). <br>La salida a través del capacitor aumenta exponencialmente con la constante de tiempo:</p>
+                    <i>t = R1 * C1</i>
+                    <p>Cuando el voltaje a través de C1 iguala dos tercios de Vcc el comparador interno del 555 se resetea el flip-flop, que entonces descarga el capacitor C1 rápidamente y lleva al terminal de salida a su estado bajo (low). El circuito e activado con un impulso de entrada que va en dirección negativa cuando el nivel llega a un tercio de Vcc. Una vez disparado, el circuito permanece en ese estado hasta que pasa el tiempo de seteo, aun si se vuelve a disparar el circuito. <br>La duración del estado alto (high) es dada por la ecuación: T= 1.1 * (R1*C1) <br>El intervalo es independiente del voltaje de Vcc. Cuando el terminal reset no se usa, debe atarse alto para evitar disparos espontáneos o falsos.</p>
+                </div>
+                <div class="tema">
+                   <h3 id="3.5">3.5 Logica secuencial</h3>
+                   <p>Los circuitos secuenciales usan elementos de memoria (celdas binarias) además de compuertas lógicas. Sus salidas son una función de las entradas y del estado de los elementos de la memoria. El estado de los elementos de la memoria, a su vez es una función de las entradas previas. Como consecuencia, las salidas de un circuito secuencial dependen no solamente de las entradas presentes, sino también de las entradas pasadas, y el comportamiento del circuito debe especificarse por una secuencia de tiempos de las entradas y estados internos. <br>Diagrama a bloques de un circuito secuencial</p>
+                   <img src="img/u3/circuito_combinacional.png" alt="circuito_combinacional">
+                   <p>Un circuito secuencial se divide en sincrónico y asincrónico.</p>
+                   <li>Sincrónico: Es un sistema cuyo comportamiento se define a partir de su conocimiento de sus señales en instantes discretos de tiempo.</li>
+                   <li>Asincrónico: Es un circuito que depende del orden en que cambien las señales de entrada y puedan ser afectadas en un instante dado de tiempo.</li>
+                   <p>La Lógica Secuencial es el Método de ordenamiento de acciones, razonamiento, y expresión de la automatización de maquinaria, equipos y procesos. Y su interrelación con el hombre. Esto nos da por consiguiente los binomios, hombre-máquina, hombre-proceso.Es un tipo de circuito de lógica que salida dependa no sólo de la actual entrada pero también de la historia de la entrada. Esto está en contraste con lógica combinational, del que salida es una función, y solamente de, la actual entrada. Es decir la lógica secuencial tiene almacenaje (memoria) mientras que la lógica combinational no. <br>La lógica secuencial por lo tanto se utiliza para construir algunos tipos de computadora memoria, otros tipos de retrasan y los elementos del almacenaje, y autómatas finito. La mayoría de los circuitos de computadora prácticos son una mezcla de la lógica combinational y secuencial. En los Circuitos Combinacionales las salidas están determinadas por completo por los valores presentes en las entradas.</p>
+                    <div class="subtema">
+                        <h3 id="3.5.1">3.5.1 Compuertas</h3>
+                        <p>A diferencia de los circuitos lógicos combinacionales, los circuitos secuenciales tiene memoria; pueden reflejar en su salida el efecto de una señal de entrada que hubo segundos o días antes. <br>Los circuitos AND, OR y NOT funcionan sin memoria. Por ejemplo, en el caso del circuito AND, una salida lógica 1 es obtenida únicamente durante el tiempo que todas las entradas estén simultáneamente en lógica 1. Si cada entrada pasa por lógica 1 de una manera secuencial, no-simultánea, la salida permanecerá aquí la necesidad en lógica 0.</p>
+                        <h4>RS FLIP - FLOP</h4>
+                        <p>Un RS flip-flop llamado algunas veces un "set-reset" flip-flop, es un circuito con dos entradas y dos salidas. Las salidas son complementos entre sí, o sea que, cuando la una esté en alto, la otra estará en bajo. Deriva su nombre del hecho de poder quitar (reset) y poner (set) el estado alto en la salida Q. cuando se aplique un pulso en cada una de las dos entradas: un pulso alto en la entrada S (set) quita, "borra", el pulso alto puesto en anterioridad en Q. En la práctica la polaridad del pulso de manejo dependerá del tipo de compuertas con las cuales se haya implementado el RS flip-flop, tal como se puede observar en la figura 13. <br>Circuitos lógicos secuenciales De las tablas de verdad podemos deducir su funcionamiento teniendo en cuenta que, cuando Q tiene lógica 1, el flip-flop se considera "set" (puesto), y cuando Q tiene lógica 0 es porque el flop-flop está "reset" (cleared, borrado). Las dos salidas Q y no-Q son simétricas(iguales) en lo que a características eléctricas se refiere, por lo que, de acuerdo con las circunstancias, se podrá tomar una u otra como tal.</p>
+                        <h4>CLOCKED RS FLIP-FLOP</h4>
+                        <p>El flip-flop RS básico es "asynchronous" (no-sincronizado), responde a las entradas tan pronto como ellas ocurren; muestra cambios en la salida cada que se presentan cambios en Set y Reset. En ciertos procesos se requiere "to-synchronize" (sincronizar) la operación del RS flip-flop, de tal manera que sólo se produzcan cambios en la salida cuando se cumpla cierto requisito anterior. En caso contrario, las acciones se SET y RESET no deben alterar la salida Q. Una manera de sincronizar la operación de un RS Flip-Flop con otros circuitos lógicos, es colocar una compuerta a cada entrada, de tal forma que ellas respondan a S y R solamente cuando sean "habilitadas" (capacitadas) por un lógico 1 (nivel alto) procedente de un CLOCK. (un clock es un circuito secuencial generador de un tren de pulsos, "ceros" y "unos" de manera alternada). La figura 14 muestra un clocked Rs flip-flop(controlado, no sincronizado).</p>
+                        <h4>DATA o D FLIP - FLOP</h4>
+                        <p>El flip - flop tipo D es una cierta modficación introducida al flip-flop clocked Rs(controlado en su funcionamiento por los pulsos Clock en una sola línea común de entreda). <br>Circuitos lógicos secuenciales Podemos apreciar que, es agregado un inversor a una de las dos entradas del flip-flop, de tal forma que la entrada restante y la entrada del inversor queden unidas. Lo anterior garantiza que las entradas a la sección RS sean siempre complementarias una de otra, y asegura que el estado lógico en la salida Q sserá siempre el mismo estado lógico, alto o bajo, del último pulso que llegó a la entrada D. <br>La información dada tiene un carácter general, ya que no se pueden dar conceptos concretos por razón de la amplia variedad de flip-flop que se fabrican en circuito integrado, aún dentro de un mismo tipo. Nos servirá para dejar cimentados ciertos principios, los cuales nos ayudarán a interpretar luego las diferentes tablas de verdad, dadas por el fabricante para facilitar al experimentador la comprensión del funcionamiento de una u otra referencia.</p>
+                        <h4>JK FLIP - FLOP</h4>
+                        <p>Probablemente es el flip-flop más usado en los circuitos secuenciales lógicos, por su capacidad para CONTAR y DIVIDIR. Entrega un pulso completo de salida por cada dos pulsos de entrada, característica tenida en cuenta por muchos para denominarlo, también, "toggle"(basculante, ondulante, Si - No - Si - No, etc.) flip-flop, o sencillamente un T flip-flop. <br>Básicamente, el JK flip-flop es un biestable RS flip-flop con compuertas (clocked) dispuestas de tal forma que la acción PONER - QUITAR (set - reset) sea llevada a cabo por una sola línea de entrada. <br>Básicamente, se puede considerar el JK flip-flop como un circuito biestable con una sola entrada y dos salidas, completamente entre sí. En la práctica, el circuito integrado dispone de dos entradas auxiliares, marcadas J y K, dispuestas para "condicionar}" el estado que debe tomar la salida a partir del momento que llegue la próxima transición activa del pulso clock. <br>Circuitos lógicos secuenciales La figura 16 muestra el circuito lógico y tabla de verdad para este flip-flop. Se puede observar que, de acuerdo a como se encuentren las entradas J y K, la salida Q puede operar como toggle o quedarse indefinidamente en un determinado estado, sin importar los pulsos en la entrada clock. Cuando se utiliza al flip-flop como contador o divisor, se pueden dejar libres las entradas J y K; en este caso, los pulsos cuya frecuencia se desea modificar, se deben poner en la entrada correspondiente al clock.</p>
+                        <img src="img/u3/flip%20flop%20jk.png" alt="flip flop jk">
+                    </div>
+                    <div class="subtema">
+                        <h3 id="3.5.2">3.5.2 Flip-flop</h3>
+                        <p>Los circuitos secuenciales sincrónicos que usan pulso de reloj en las entradas de los elementos de memoria se llaman circuitos secuenciales temporizados. Los elementos de memoria utilizados en los circuitos secuenciales temporizados se llaman Flip-Flops. Estos circuitos son celdas binarias capaces de almacenar en bit de información. Todo circuito Flip-Flop tiene 2 salidas (de aquí el nombre de biestable), una para el valor normal (Q) y otra para el valor complemento.</p>
+                        <li>Flip-Flop SR</li>
+                        <li>Flip-Flop D</li>
+                        <li>Flip-Flop JK</li>
+                        <h4>Flip-Flop SR</h4>
+                        <p>Este tipo de Flip-Flop tiene 2 entradas una S (set) y otra a R (reset) set puesta 1 y reset puesta 0. Este Flip-Flop tiene 2 salidas (Q y ). También se le conoce Flip-Flop set-reset o bloqueador SR (SR Latch). La salida es el complemento (el estado lógico opuesto) de la otra salida Q. Para que un circuito sea capaz de registrar o recordar uno de 2 estados posibles; es necesario que el circuito combinacional tenga una “retroalimentación” de sus salidas con respecto a sus entradas, para “recordarle” al propio circuito su salida. A continuación se ilustra lo anterior por medio de 2 compuertas NAND.</p>
+                        <img src="img/u3/SR2.png" alt="SR2">
+                        <p>Otras de la modificaciones realizadas al flip-flop SR, fue darle la capacidad de ser borrado (CLR) ó activado (St ó PR) de una manera asíncrona a fin de ponerle en un estado inicial. Ambas señales de control se activan con un 1 lógico.</p>
+                        <h4>Flip-Flop D</h4>
+                        <p>Este Flip-Flop recibe su nombre por la habilidad de transmitir datos, es básicamente un flip-flop SR con un inversor en la entrada R. El inversor agregado reduce el número de entradas de dos a una. Este tipo de flip-flop se llama a veces “bloqueador D con compuertas” ó “flip-flop de bloqueo”. La entrada CK se le da a menudo la designación variable G (de gate) para indicar que ésta entrada habilita el flip-flop de bloqueo para hacer posible que los datos entren al mismo. Los flip-flops tipo D también pudieran tener las entradas de borrado (CL) y activado (St) que funcionan de la misma manera que para los flip-flops SR. Ejemplo de un CI es el 7474 (con 2 flip-flops) y el 7475 (con 4 flip-flops).</p>
+                        <img src="img/u3/D.png" alt="d">
+                        <h4>Flip-Flop JK</h4>
+                        <p>Es un refinamiento del SR ya el estado indeterminado del tipo SR se define en el tipo JK. La notación JK se usa simplemente para distinguir este tipo de flip-flop del tipo SR. Las entradas J y K se comportan como las entradas S y R, donde la letra J se usa para la entrada de puesta a 1 y la letra K para la entrada de puesta a 0. Cuando ambas entradas se aplican a J y K simultáneamente, el flip-flop cambia a su estado complemento, esto es si Q=1 cambia a Q=0 y viceversa. Las entradas J y K son entradas sincronizadas. Esto significa que no tiene ningún efecto en la salida hasta que la entrada de reloj reciba la señal apropiada. Un ejemplo de CI es el 7476 (con 2 flip-flops).</p>
+                    </div>
+                    <div class="subtema">
+                        <h3 id="3.5.3">3.5.3 Diseño de circuitos secuenciales</h3>
+                        <p>Son aquellos en los cuales las salidas en un instante de tiempo determinado dependen de las entradas en ese instante y en instantes anteriores de tiempo, podemos llegar a la conclusión de que este tipo de circuitos son capaces de memorizar información y que esta información en un momento dado depende de las entradas ocurridas en el circuito hasta ese momento. <br>El circuito no es capaz de memorizar todas las entradas ocurridas hasta un instante de tiempo determinado, sino solo una cierta parte.</p>
+                        <h4>Lógica secuencial</h4>
+                        <p>Los circuitos secuenciales utilizan un concepto de la teoría de circuitos llamado lógica secuencial. La lógica secuencial se basa en el estado de las entradas, así como en los datos almacenados en la memoria del circuito. Uno de los aspectos más importantes de la lógica secuencial es el concepto de "flip-flops". Los flip-flops son conmutadores internos en un circuito secuencial que son, ya sea abiertos, permitiendo el flujo de información; o cerrados, inhibiendo el flujo de información. Depende de una serie de factores establecidos por el ingeniero. Esto permite la construcción de sistemas complejos que pueden completar una amplia gama de funciones.</p>
+                        <h4>Circuitos síncronos</h4>
+                        <p>Los circuitos síncronos hacen uso de flip-flops y compuertas lógicas. Similar a los flip-flops, las compuertas lógicas o permiten o restringen el flujo de información en función de determinadas situaciones, tales como si dos variables son iguales una a otra. Un tipo específico de circuito síncrono, llamado circuito cronometrado secuencial, utiliza pulsos de reloj. Los pulsos de reloj se utilizan para sincronizar los diferentes elementos del circuito, tales como los flip-flops. Los flip-flops en un circuito cronometrado secuencial sólo se ven afectados cuando se les indica mediante un pulso de reloj.</p>
+                        <h4>Circuitos asíncronos</h4>
+                        <p>Un circuito asíncrono es el que registra el orden en el que cambian sus variables de entrada, y envía una salida que depende del resultado. Este tipo de circuito también debe ser capaz de cambiar sus variables de entrada en cualquier momento. Hay también un tipo específico de circuito asíncrono, denominado circuito asíncrono tipo compuerta. Los circuitos tipo compuerta son circuitos combinacionales esencialmente (es decir, que se basan únicamente en la entrada actual) con un camino de realimentación. El camino de realimentación significa que la información de la salida puede ser realimentada en la entrada. Debido a la retroalimentación, estos tipos de circuitos pueden ser inestables, por lo que no se usan comúnmente.</p>
+                        <h4>Usos de circuitos secuenciales</h4>
+                        <h4>RESETABLE JK FLIP - FLOP</h4>
+                        <p>Muchas veces se requiere flip-flops tipo JK que puedan ser Set y Reset a estados conocidos, antes de que ellos inicien su uso en un proceso particular. Por ejemplo, si se dispone de varios flip-flops para efectuar un trabajo en equipo, es prácticamente un requisito poderlos colocar con todas sus salidas en un nivel igual, lógico 1 o lógico =. Para esta función, el integrado tiene dos terminales auxiliares, marcados PRESET (PR) y CLEAR (CLR). El preset coloca en estado lógico 1 en la salida Q cuando es alimentado con un pulso bajo; si esto se hace con la entrada clear, el la salida Q aparece un estado lógico 0. se considera que las entradas preset y clear están en un nivel inactivo, cuando se las mantiene en alto(libres, "al aire"). A las entradas "clear" y "preset" se les conoce como "entradas de control prioritario", a las entradas "j" y "k" se les denomina "entradas de control simple".</p>
+                        <h4>CIRCUITO MONO - ESTABLE (ONE - SHOT)</h4>
+                        <p>Básicamente, el one-shot es un circuito con una sola entrada y dos salidas complementarias, Q y no-Q. Un pulso activo en la entrada, hace que el circuito cambie su estado, permanezca así invertido durante un período de tiempo dado, y luego retorne automáticamente a su estado original. El one.shot es un circuito mono-estable(monostable), o sea que tiene un estado definido al que siempre retornará. <br>Al one-shot se le conoce también como circuito IGUALADOR DE PULSOS, ya que, aunque los pulsos de disparo (trigger) tengan diferente ancho (width), los pulsos a la salida serán siempre iguales, con el mismo ancho o largo(tiempo que permanece el pulso en determinado nivel). Los circuitos monoestables son ampliamente usados como temporizadores, retardadores de pulsos, en toda clase de procesos industriales.</p>
+                        <h4>MULTIVIBRADOR</h4>
+                        <p>Es una forma de circuito oscilador, en el cual dos salidas complementarias están continuamente invirtiendo su estado, a una rata determinada por los componentes Rc del circuito (resistencia-capacidad). Si la salida en Q es una serie de pulsos positivos cortos, la salida en no-Q será una serie de pulsos positivos largos,, equivalentes al tiempo que permanece en el nivel bajo la salida Q. Los multivibradores son usados donde quiera que sea necesario tener una hilera de pulsos u ondas cuadradas. Si se desea, la rata de repetición del circuito puede ser sincronizada por una fuente externa, tal como un pulso clock.</p>
+                        <h4>SCHMITT TRIGGER</h4>
+                        <p>Es un circuito biestable (dos estados), con una entrada y una salida. El nivel en la salida cambia agudamente, de una manera rápida, cuando el nivel de la señal de entrada excede un predeterminado valor, lo que permite su aplicación en conversión de ondas senoidales a ondas cuadradas, y en acondicionamiento eléctrico de señales (para facilitar el manejo de circuitos TTl con fuentes de señales No-TTl). También, el circuito Schmitt-Trigger puede ser usado para restaurar pulsos que han sido deteriorados por interferencias durante su transmisión.</p>
+                        <h4>DIAGRAMAS DE TIEMPO</h4>
+                        <p>El diagrama de tiempos para un circuito lógico es usualmente tan útil como el esquema electrónico. El diagrama de tiempos es una representación pictórica de la manera como los niveles lógicos varían en función del tiempo. Es de bastante utilidad cuando se desea conocer de un solo vistazo las características operacionales de un circuito, o se está buscando una falla en un proyecto digital. La figura 20 muestra el diagrama de tiempos para varias funciones de las variables lógicas A y B, mostradas en las dos filas superiores. La variable A está representada por un flujo de datos en serie, compuestos de alternantes 1's y dos 0's.</p>
+                    </div>
+                </div>
+        </section>
+        
+        <section class="unidad hidden" id="unidad4">
+                <h2>Unidad 4: Convertidores</h2>
+                <div class="tema">
+                    <h3 id="4.1">4.1 Convertidor Analógico/Digital (A/D)</h3>
+                    <h4>Circuito eléctrico de un convertidor Analógico - Digital</h4>
+                    <p>Una cantidad digital tiene un valor con 2 posibilidades 0 (bajo) ó 1 (alto). Vimos anteriormente que para la familia lógica TTL los rangos son: <br>O lógico= 0V a 0.8 Vcd <br>1 lógico = 2V a 5Vcd <br>En contraste con una cantidad analógica puede tomar cualquier valor sobre un rango continuo de valores, donde su valor exacto si es significativo. Muchas variables físicas son de naturaleza analógica y pueden tomar cualquier valor dentro de un rango continuo de éstas. Ejemplos de variables de este tipo incluyen temperatura, presión, intensidad luminosa, señales de audio, posición, velocidad rotacional y velocidad de flujo. Los sistemas digitales llevan a cabo todas las operaciones matemáticas internas, mediante el uso de circuitería y operaciones digitales. Cualquier información del mundo exterior que se quiera introducir a un sistema digital, primero debe ponerse en forma digital. A continuación se ilustra el diagrama a Bloques de los convertidores analógicos-digitales (ADC) y digital/analógico (DAC) que utilizan para conectar la computadora con el mundo analógico.</p>
+                    <h4>Transductor</h4>
+                    <p>Es un dispositivo que convierte una variable física en una eléctrica. Algunos transductores de uso común son las terminales, las fotoceldas, los fotodiodos, los medidores de flujo, los transductores de presión y los tacómetros. La salida eléctrica de un transductor es una corriente o un voltaje analógico proporcional a la variable física que se está vigilando.</p>
+                    <h4>Convertidos Analógico-Digital-Analógico (ADC)</h4>
+                    <p>La salida analógica (eléctrica) del transductor en la entrada al ADC. El ADC convierte asta entrada en una salida digital. Esta última consiste de varios bits que representan el valor de la entrada analógica.</p>
+                    <h4>Sistemas digitales (Computadora)</h4>
+                    <p>La representación digital de la variable del proceso se transmite desde ADC hacia la computadora, que lo almacena y procesa de acuerdo con las instrucciones del programa de ejecución. <br>Ahora la salida=(0.5 mAmp)*(29)=14.5 mAmp.</p>
+                </div>
+                <div class="tema">
+                    <h3 id="4.2">4.2 Convertidor Digital/Analógico (D/A)</h3>
+                    <h4>Circuito eléctrico de un convertidor Digital- Analógico</h4>
+                    <p>En la actualidad existen varios métodos y circuitos para producir la operación de Digital-Analógico. Por lo que no es tan importante conocer los diversos esquemas de circuitos, ya que los convertidores D/A están disponibles como CI o bien como paquetes encapsulados que no requieren ningún conocimiento de circuitos. En su lugar, es importante conocer las características significativas de realización de los convertidores D/A, en términos generales, de manera que se puedan utilizar en forma inteligente. A continuación se muestra como ejemplo el circuito básico de un tipo de convertidor D/A de 4 bits utilizando un amplificador operacional en configuración de sumador con resistencias con factores de ponderación binaria.</p>
+                    <img src="img/u4/circuito.png" alt="circuito" class="img-grande">
+                    <p>El operador operacional sirve como amplificador sumador, el cual produce la suma de los factores de ponderación de estos valores de entrada. Un amplificador operacional sumador multiplica cada voltaje de entrada por la proporción de la resistencia de retroalimentación Rs de la entrada correspondiente. Por ejemplo: la entrada D tiene una R =1 KΩ, de manera que el amplificador operacional pasa el voltaje de D sin atenuación. La entrada C tiene una R= 2KΩ, de manera que será atenuada en ½ . La entrada B tiene una R=4KΩ, de manera que será atenuada en ¼. La entrada A tiene una R=8KΩ, de manera que será atenuada, en 1/8.</p>
+                    <i>Vsal= - (VD +1/2 VC +1/4 VB +1/8 VA)</i>
+                    <p>La salida del amplificador sumador es un voltaje analógico que representa una suma de los factores de ponderación de las entradas digitales. <br><br>La conversión digital-analógica (D/A) es el proceso de tomar a un valor representando en código digital (como binario directo o BCD) y convertirlo en un voltaje o corriente que sea proporcional al valor digital. Como ejemplo, a continuación se ilustra el diagrama a bloques, su tabla de valores y sus formas de onda de salida de un contador de 4 bits, para convertir de digital a analógica, su señal en código digital. En general:</p>
+                    <i>Salida analógica= K * entrada digital</i>
+                    <p>K= factor proporcionalidad y tiene un valor constante, puede estar en unidades de voltaje o corriente.</p>
+                    <p>Ejemplo: Un convertidor D/A de 5 bits tiene una corriente de salida. Para una entrada digital de 10100, se produce una corriente de salida de 10 mAmp. ¿Cual será el valor de la corriente de salida para una entrada digital de 11101? <br> Sabemos que: <br>101002=2010 1 <br>0100=k*20=10mAmp <br>K=10/20mAmp=0.5 mAmp. <br>11101=29 <br>La salida digital de la computadora se conecta a un DAC, que la convierte a un voltaje o corriente proporcional a la información de bits que tiene a su entrada.</p>
+                    <h4>Actuador</h4>
+                    <p>Es un circuito ó dispositivo que sirve como actuador para el control de la variable física, regida por la señal analógica que proviene del DAC. Ejemplo: Máquinas robotizadas, automotrices, etc.</p>
+                </div>
+        </section>
+
+       <script>
+            function cambiar(unidad) {
+                switch(unidad){
+                    case 1:
+                        document.getElementById('unidad1').style.display = 'inline-block';
+                        document.getElementById('unidad2').style.display = 'none';
+                        document.getElementById('unidad3').style.display = 'none';
+                        document.getElementById('unidad4').style.display = 'none';
+                        break;
+                    case 2:
+                        document.getElementById('unidad1').style.display = 'none';
+                        document.getElementById('unidad2').style.display = 'inline-block';
+                        document.getElementById('unidad3').style.display = 'none';
+                        document.getElementById('unidad4').style.display = 'none';
+
+                        break;
+                    case 3:
+                        document.getElementById('unidad1').style.display = 'none';
+                        document.getElementById('unidad2').style.display = 'none';
+                        document.getElementById('unidad3').style.display = 'inline-block';
+                        document.getElementById('unidad4').style.display = 'none';
+                        break;
+                    case 4:
+                        document.getElementById('unidad1').style.display = 'none';
+                        document.getElementById('unidad2').style.display = 'none';
+                        document.getElementById('unidad3').style.display = 'none';
+                        document.getElementById('unidad4').style.display = 'inline-block';
+                        break;
+                }
+            }
+        </script>
+    </body>
+</html>
